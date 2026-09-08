@@ -50,13 +50,6 @@ layout: default
           <p class="cv-note">Promoting the adoption of the Wolfram Language in STEM by publishing computational essays and creating educational resources.</p>
         </div>
       </li>
-      <li>
-        <span class="cv-dates">June 22–July 12, 2026</span>
-        <div class="cv-body">
-          <p class="cv-role">Mentor, Wolfram High School Summer Research Program</p>
-          <p class="cv-location">Bentley University, Boston, MA</p>
-        </div>
-      </li>
     </ul>
   </section>
 
@@ -119,8 +112,14 @@ layout: default
       <li>
         <span class="cv-dates cv-date-list"><span class="cv-date-item">Spring 2025</span><span class="cv-date-separator">, </span><span class="cv-date-item">Fall 2025</span><span class="cv-date-separator">, </span><span class="cv-date-item">Spring 2026</span></span>
         <div class="cv-body">
-          <p class="cv-role">Dean’s List</p>
+          <p class="cv-role">Term Honor: Dean’s List</p>
           <p class="cv-location">Stony Brook University</p>
+        </div>
+      </li>
+      <li>
+        <span class="cv-dates">May 8, 2026</span>
+        <div class="cv-body">
+          <p class="cv-role">Successful Participant, 2026 Mathematical Contest In Modeling (MCM)</p>
         </div>
       </li>
     </ul>
