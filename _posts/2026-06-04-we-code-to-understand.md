@@ -52,7 +52,7 @@ What makes this practical is that [the Wolfram Language](https://reference.wolfr
 
 This matters not as a matter of convenience but as a requirement for the pedagogy. Without it, the program's target, moving a student from zero experience to a published computational essay in a single semester, would not be realistic for non-CS STEM students. With the power of the Wolfram Language, the cognitive effort can go where it should: on the research question, the exploration, and the argument the essay is making.
 
-## The Computational Essay
+## The computational essay
 
 A [computational essay](https://www.wolframcloud.com/obj/Expositions/Published/ComputationalEssayGuidelines) is an interactive narrative that weaves human language, code, and computer output to communicate an idea. Stephen Wolfram describes it as ["an intellectual story told through collaboration between a human author and a computer."](https://writings.stephenwolfram.com/2017/11/what-is-a-computational-essay/) It is not a coding notebook with prose around it, and it is not an essay with code attached. The text, the code, and the computer outputs are all combined together to construct a coherent argument or narrative.
 

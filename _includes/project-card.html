@@ -1,24 +1,15 @@
-{%- assign p = include.project -%}
-{%- assign href = p.external_url | default: p.url -%}
-<a href="{{ href }}" class="card" target="_blank" rel="noopener">
-  <div class="card-body">
-    <h2 class="card-title">{{ p.title | escape }}</h2>
-    {%- if p.badge or p.metadata -%}
-      <div class="card-metadata">
-        {%- if p.badge -%}
-          <span class="badge">{{ p.badge }}</span>
-        {%- endif -%}
-        {%- if p.metadata -%}
-          {%- assign meta_items = p.metadata | split: " · " -%}
-          {%- for item in meta_items -%}
-            <span class="tag">{{ item }}</span>
-          {%- endfor -%}
-        {%- endif -%}
+{% assign p = include.project %}
+{% assign href = p.external_url | default: p.url %}
+<a href="{{ href | relative_url }}" class="project-entry">
+  <div>
+    <h3>{{ p.title | escape }}</h3>
+    {% if p.summary %}<p>{{ p.summary | escape }}</p>{% endif %}
+    {% if p.badge %}<p class="recognition">{{ p.badge | escape }}</p>{% endif %}
+    {% if p.metadata %}
+      <div class="tags">
+        {% for item in p.metadata %}<span class="tag">{{ item | escape }}</span>{% endfor %}
       </div>
-    {%- endif -%}
-    {%- if p.summary -%}
-      <p class="card-summary">{{ p.summary }}</p>
-    {%- endif -%}
+    {% endif %}
   </div>
-  <span class="card-arrow" aria-hidden="true">↗&#xFE0E;</span>
+  <span class="arrow" aria-hidden="true">{% if p.external_url %}↗&#xFE0E;{% else %}→{% endif %}</span>
 </a>

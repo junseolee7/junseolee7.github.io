@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('./assets/SourceSans3-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('./assets/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./assets/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+/* Website values from Junseo-Lee-Design-Standard.md, version 1.0. */
+:root {
+  color-scheme: light;
+  --font-sans: 'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono',ui-monospace,monospace;
+  --color-canvas: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-surface-hover: #ededed;
+  --color-ink: #191919;
+  --color-secondary: #595959;
+  --color-border: #dedede;
+  --color-control-border: #858585;
+  --color-button-hover: #363636;
+  --color-accent-blue: #2358c5;
+  --color-accent-blue-soft: #edf3ff;
+  --color-accent-teal: #13776c;
+  --color-accent-teal-soft: #edf7f5;
+  --color-accent-amber: #965b13;
+  --color-accent-amber-soft: #fff5e7;
+  --color-focus: var(--color-accent-blue);
+  --color-inverse: #ffffff;
+  --text-small: .875rem;
+  --text-caption: var(--text-small);
+  --text-interface: 1rem;
+  --text-body: 1.125rem;
+  --text-lead: 1.375rem;
+  --text-h3: 1.5rem;
+  --text-h2: 2rem;
+  --text-h1: clamp(2.5rem,1.8rem + 2vw,3.5rem);
+  --text-display: clamp(3.25rem,2rem + 4vw,5rem);
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --leading-display: 1.02;
+  --leading-heading: 1.16;
+  --leading-subheading: 1.30;
+  --leading-lead: 1.50;
+  --leading-body: 1.60;
+  --leading-reading: 1.70;
+  --leading-interface: 1.60;
+  --leading-button: 1.20;
+  --leading-small: 1.50;
+  --leading-table: 1.50;
+  --leading-code: 1.80;
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --radius-small: .25rem;
+  --radius-medium: .5rem;
+  --radius-pill: 999px;
+  --width-reading: 65ch;
+  --width-page: 72rem;
+  --gutter: clamp(1.25rem,4vw,4rem);
+  --duration: 160ms;
+  --easing: ease;
+  --control-height: 2.75rem;
+  --button-padding-x: 1.25rem;
+}

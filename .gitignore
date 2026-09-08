@@ -1,12 +1,8 @@
-_site
-.sass-cache
-.jekyll-cache
+_site/
+.jekyll-cache/
 .jekyll-metadata
-vendor
+.sass-cache/
+.bundle/
+vendor/
+node_modules/
 .DS_Store
-**/.DS_Store
-.obsidian/
-.claude/
-.trash/
-# Local-only backup of the pre-resize profile photo
-assets/images/profile-original.jpg

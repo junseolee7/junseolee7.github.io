@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="service-page">
+  <header class="page-header detail-header">
+    <a class="back-link" href="{{ '/services/' | relative_url }}">All services</a>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.summary %}<p class="lead">{{ page.summary | escape }}</p>{% endif %}
+    {% if page.metadata %}
+      <div class="tags">
+        {% for item in page.metadata %}<span class="tag">{{ item | escape }}</span>{% endfor %}
+      </div>
+    {% endif %}
+  </header>
+  <div class="service-content prose">{{ content }}</div>
+  {% if page.register_url or page.info_session_url %}
+    <div class="service-cta">
+      {% if page.register_url %}<a href="{{ page.register_url }}" class="button">{{ page.register_label | default: 'Register' | escape }}</a>{% endif %}
+      {% if page.info_session_url %}<a href="{{ page.info_session_url }}" class="button button--secondary">{{ page.info_session_label | default: 'Book an info session' | escape }}</a>{% endif %}
+    </div>
+  {% endif %}
+</article>

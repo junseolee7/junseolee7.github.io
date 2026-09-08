@@ -3,13 +3,15 @@ layout: service
 section: tutoring
 title: "AP Statistics"
 summary: "A 20-session AP Statistics exam preparation program."
-metadata: "High School · AP · Test Prep"
+metadata:
+  - High school
+  - AP
+  - Test prep
 order: 1
 permalink: /services/ap-statistics/
 price: "70,000 KRW per 1.5-hour session"
 register_url: "https://forms.gle/3EhBVeGgVV59tXUy7"
 info_session_url: "https://calendar.app.google/KDqz53dvSkYNH1m18"
-glyph: "σ"
 instructor: "Junseo Lee"
 ---
 
@@ -17,14 +19,14 @@ instructor: "Junseo Lee"
 
 A 20-session program — roughly 10 weeks — preparing students for the AP Statistics exam, aligned with the College Board's revised framework effective Fall 2026. Each unit pairs concept sessions with graded problem-solving and evaluation, and the program concludes with full-length timed mock exams and review.
 
-## Instructor Profile
+## Instructor profile
 
 - Applied Mathematics and Statistics major at Stony Brook University (rising junior)
 - **Relevant Teaching Experience**: Teaching Assistant for AMS 310: Survey of Probability and Statistics at Stony Brook University (Spring 2026)
 - **College statistics coursework**: AMS 310 (Survey of Probability and Statistics), AMS 394 (Statistical Laboratory), and AMS 315 (Data Analysis), with AMS 311 (Probability Theory) and AMS 317 (Introduction to Linear Regression Analysis) in Fall 2026
 - Scored a 5 on AP Statistics exam (2024)
 
-## Learning Outcomes
+## Learning outcomes
 
 The course is built around the four **statistical practices** defined in the [AP Statistics Course and Exam Description](https://apcentral.collegeboard.org/media/pdf/ap-statistics-course-and-exam-description-effective-fall-2026.pdf):
 
@@ -65,7 +67,7 @@ The course covers all five units of the AP Statistics exam as outlined in the CE
   - *5 Steps to a 5: 500 AP Statistics Questions to Know by Test Day*
   - *The Princeton Review AP Statistics Premium Prep* (latest edition)
 
-## Format and Availability
+## Format and availability
 
 Sessions are held online via Google Meet, or in person in Songdo or Gangnam. A mixed arrangement also works; for example, one online and one in-person session each week. The format is confirmed during the introductory call and can be adjusted by session as needed.
 
@@ -94,6 +96,6 @@ Time beyond the 1.5-hour block, when needed, is billed at 15,000 KRW per additio
 - **Preparation**: Students complete all pre-session assignments before each session.
 - **Venue costs**: For in-person sessions, any venue or space costs (such as a study café) are covered by the student.
 
-## Getting Started
+## Getting started
 
 A short introductory call is available at no charge to discuss the student's goals, current level, and scheduling before any commitment.

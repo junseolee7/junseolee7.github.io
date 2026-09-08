@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Junseo Lee’s approved design standard for websites, documents, and presentations: typography, color, layout, components, and editorial conventions.">
+    <title>Junseo Lee Design Standard</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="specimen.css">
+  </head>
+  <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead"><a class="masthead-brand" href="#overview">Junseo Lee</a><div class="masthead-meta"><span>Design standard</span><span class="version">Version 1.0</span><span>Status: Approved</span></div></header>
+  <div class="shell">
+      <aside class="rail">
+        <p class="rail-label">On this page</p>
+        <nav aria-label="Design system sections"><a href="#overview" aria-current="location"><span>00</span>Overview</a><a href="#typography"><span>01</span>Typography</a><a href="#color"><span>02</span>Color</a><a href="#layout"><span>03</span>Layout &amp; spacing</a><a href="#components"><span>04</span>Components</a><a href="#writing"><span>05</span>Technical writing</a></nav>
+        <p class="rail-bottom">Effective date: September 6, 2026</p>
+      </aside>
+      <main id="main">
+        <section id="overview" class="intro">
+          <div class="eyebrow">Approved on September 6, 2026</div>
+          <h1 class="display">Design standard</h1>
+          <p class="lead">A recognizable identity for websites, documents, and presentations.</p>
+          <p class="scope-note">Typography, spacing, and alignment establish a clear, precise, understated visual language. Research figures and diagrams are outside the scope of version 1.0. Required institutional and publication conventions take precedence.</p>
+          <p class="scope-note"><a class="accent-link" href="../Junseo-Lee-Design-Standard.md">Read the governing specification</a></p>
+        </section>
+        <div class="sample">
+          <div class="sample-label"><span>Identity in context</span><span>Source Sans 3</span></div>
+          <div class="profile"><div>
+              <h2>Junseo Lee</h2>
+              <p>I’m an Applied Mathematics and Statistics student at Stony Brook University studying statistics, data science, and quantitative finance.</p>
+            </div><img src="../assets/images/profile.jpg" alt="Junseo Lee" width="591" height="787"></div>
+        </div>
+        <div class="rule-grid">
+          <div>
+            <h3>Clarity through type</h3>
+            <p>One sans-serif family gives headings, reading, and navigation a common voice.</p>
+          </div>
+          <div>
+            <h3>A neutral foundation</h3>
+            <p>White, charcoal, and gray establish the foundation. Blue, teal, and amber have distinct supporting roles.</p>
+          </div>
+          <div>
+            <h3>Structure with space</h3>
+            <p>Alignment and consistent spacing make relationships easy to follow.</p>
+          </div>
+        </div>
+        <section id="typography" class="section">
+          <div class="section-heading"><h2>Typography</h2><span class="index">01</span></div>
+          <p class="section-description">Source Sans 3 for headings, prose, and interface labels. JetBrains Mono for code. Website sizes below assume a 16 px browser default and scale with the reader’s font settings.</p>
+          <div class="type-family">
+            <div>
+              <div class="letter-pair">Aa</div>
+              <h3 class="subheading">Source Sans 3</h3>
+              <p>Regular: 400<br>Medium: 500<br>Semibold: 600</p>
+            </div>
+            <div>
+              <div class="letter-pair mono">Aa</div>
+              <h3 class="subheading">JetBrains Mono</h3>
+              <p>Code: regular 400<br>Selective emphasis: semibold 600</p>
+            </div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>Display</strong>Size: 52–80 px<br>Weight: 600<br>Line height: 1.02</div>
+            <div class="type-example display">Junseo Lee</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>Page heading</strong>Size: 40–56 px<br>Weight: 600<br>Line height: 1.16</div>
+            <div class="type-example page-heading">Research and building</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>Section heading</strong>Size: 32 px<br>Weight: 600<br>Line height: 1.16</div>
+            <div class="type-example section-heading-example">Selected work</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>Subheading</strong>Size: 24 px<br>Weight: 600<br>Line height: 1.30</div>
+            <div class="type-example subheading-example">A precise explanation</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>Profile item title</strong>Size: 18 px<br>Weight: 600<br>Line height: 1.60</div>
+            <div class="type-example cv-role">Founder &amp; President, Wolfram Computational Research Club at SUNY Korea</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>Profile item description</strong>Size: 16 px<br>Weight: 400<br>Line height: 1.60</div>
+            <div class="type-example cv-note">A faculty-advised research club cultivating computational thinking and technical communication through computational essays in the Wolfram Language.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>General copy</strong>Size: 18 px<br>Weight: 400<br>Line height: 1.60</div>
+            <div class="type-example body">I want to explain a method precisely and implement it competently.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta"><strong>Secondary text</strong>Size: 14 px<br>Weight: 400<br>Line height: 1.50</div>
+            <div class="type-example secondary">Captions, metadata, tags, and reference annotations share this treatment.</div>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Website typography</h3>
+            <p class="reading">General copy uses 1.60 line height; sustained reading uses 1.70. Inline code inherits its paragraph’s line spacing.</p>
+            <p class="reading">Profile entries pair an 18 px semibold title in charcoal with a 16 px regular description in secondary gray, separated by 8 px. Dates and location labels share 14 px regular type with 1.50 line height. Location labels use teal; dates use secondary gray and place names within titles remain charcoal. Section headings stay at 32 px. A 1 px light-gray rule separates consecutive entries within the entry column, with 16 px of space on each side.</p>
+            <div class="table-wrap" role="region" aria-label="Website typography">
+              <table>
+                <caption>Website typography</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Role</th>
+                    <th scope="col" class="number">Size</th>
+                    <th scope="col" class="number">Weight</th>
+                    <th scope="col" class="number">Line height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Display</th>
+                    <td class="number">52–80 px, fluid</td>
+                    <td class="number">600</td>
+                    <td class="number">1.02</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Page heading</th>
+                    <td class="number">40–56 px, fluid</td>
+                    <td class="number">600</td>
+                    <td class="number">1.16</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Section heading</th>
+                    <td class="number">32 px</td>
+                    <td class="number">600</td>
+                    <td class="number">1.16</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subheading</th>
+                    <td class="number">24 px</td>
+                    <td class="number">600</td>
+                    <td class="number">1.30</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lead paragraph</th>
+                    <td class="number">22 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Profile item title</th>
+                    <td class="number">18 px</td>
+                    <td class="number">600</td>
+                    <td class="number">1.60</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Profile item description</th>
+                    <td class="number">16 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.60</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Profile date and location label</th>
+                    <td class="number">14 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">General website copy</th>
+                    <td class="number">18 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.60</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sustained reading</th>
+                    <td class="number">18 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.70</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Navigation and ordinary interface labels</th>
+                    <td class="number">16 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.60</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Button labels</th>
+                    <td class="number">16 px</td>
+                    <td class="number">500</td>
+                    <td class="number">1.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Metadata, captions, and tags</th>
+                    <td class="number">14 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Design-system reference annotations</th>
+                    <td class="number">14 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table body</th>
+                    <td class="number">16 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table headers</th>
+                    <td class="number">14 px</td>
+                    <td class="number">600</td>
+                    <td class="number">1.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Code blocks</th>
+                    <td class="number">14 px</td>
+                    <td class="number">400</td>
+                    <td class="number">1.80</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Inline code</th>
+                    <td class="number">14 px</td>
+                    <td class="number">400</td>
+                    <td class="number">Inherit surrounding text</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Document typography</h3>
+            <p class="reading">Document sizes use points. Inline code is 11 pt in ordinary body text and inherits the surrounding line spacing.</p>
+            <div class="table-wrap" role="region" aria-label="Document typography">
+              <table>
+                <caption>Document typography</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Role</th>
+                    <th scope="col" class="number">Size</th>
+                    <th scope="col" class="number">Weight</th>
+                    <th scope="col" class="number">Line height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Document title</th>
+                    <td class="number">28 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Major section heading</th>
+                    <td class="number">20 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subsection heading</th>
+                    <td class="number">16 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lower-level heading</th>
+                    <td class="number">13 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lead paragraph</th>
+                    <td class="number">14 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.40</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Body text</th>
+                    <td class="number">12 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Captions, metadata, and footnotes</th>
+                    <td class="number">10 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.40</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table body</th>
+                    <td class="number">11 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.40</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table headers</th>
+                    <td class="number">11 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.40</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Code blocks</th>
+                    <td class="number">10 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.40</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Presentation typography</h3>
+            <p class="reading">Use 16:9 slides measuring 960 × 540 pt. Inline code matches the surrounding text size. Shorten or distribute content across slides to preserve readable sizes.</p>
+            <div class="table-wrap" role="region" aria-label="Presentation typography">
+              <table>
+                <caption>Presentation typography</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Role</th>
+                    <th scope="col" class="number">Size</th>
+                    <th scope="col" class="number">Weight</th>
+                    <th scope="col" class="number">Line height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Opening title or section-divider title</th>
+                    <td class="number">48 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.10</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ordinary slide title</th>
+                    <td class="number">36 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.15</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subheading within a slide</th>
+                    <td class="number">28 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Main body text and bullets</th>
+                    <td class="number">24 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Supporting text</th>
+                    <td class="number">20 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Captions, source credits, and metadata</th>
+                    <td class="number">18 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table body</th>
+                    <td class="number">20 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table headers</th>
+                    <td class="number">20 pt</td>
+                    <td class="number">600</td>
+                    <td class="number">1.25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Code blocks</th>
+                    <td class="number">18 pt</td>
+                    <td class="number">400</td>
+                    <td class="number">1.40</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section id="color" class="section">
+          <div class="section-heading"><h2>Color</h2><span class="index">02</span></div>
+          <p class="section-description">White and charcoal form the visual foundation. Use secondary gray for supporting information and accents for their assigned roles.</p>
+          <div class="palette">
+            <div>
+              <div class="swatch" style="background:var(--color-canvas)"></div>
+              <p class="swatch-title">White</p>
+              <p class="swatch-code">#FFFFFF</p>
+              <p class="swatch-role">Page background</p>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--color-surface)"></div>
+              <p class="swatch-title">Soft gray</p>
+              <p class="swatch-code">#F5F5F5</p>
+              <p class="swatch-role">Code and quiet surfaces</p>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--color-border)"></div>
+              <p class="swatch-title">Rule</p>
+              <p class="swatch-code">#DEDEDE</p>
+              <p class="swatch-role">Decorative dividers</p>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--color-secondary)"></div>
+              <p class="swatch-title">Graphite</p>
+              <p class="swatch-code">#595959</p>
+              <p class="swatch-role">Supporting text</p>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--color-ink)"></div>
+              <p class="swatch-title">Charcoal</p>
+              <p class="swatch-code">#191919</p>
+              <p class="swatch-role">Headings and body text</p>
+            </div>
+          </div>
+          <div class="contrast-strip"><span><strong>Charcoal on white</strong> <span class="mono" data-contrast="ink">17.58:1</span></span><span><strong>Graphite on white</strong> <span class="mono" data-contrast="secondary">7.00:1</span></span></div>
+          <div class="subsection" id="accents">
+            <h3 class="subheading">Accent roles</h3>
+            <p class="muted reading">Blue provides signature emphasis. Teal identifies explanatory callouts. Amber marks occasional important qualifications that affect interpretation or a decision.</p>
+            <div class="accent-palette">
+              <div class="accent-card accent--blue">
+                <div class="accent-pair">
+                  <div class="accent-solid"></div>
+                  <div class="accent-tint">Aa</div>
+                </div>
+                <h4>Blue</h4>
+                <p class="swatch-code">Foreground: #2358C5<br>Tint: #EDF3FF</p>
+                <p class="swatch-role">Signature accent, selected references, primary emphasis, and keyboard focus.</p>
+                <p class="accent-details">On white: <span class="mono" data-contrast="accent-blue">6.41:1</span><br>On tint: <span class="mono" data-contrast="accent-blue" data-background="accent-blue-soft">5.76:1</span></p>
+              </div>
+              <div class="accent-card accent--teal">
+                <div class="accent-pair">
+                  <div class="accent-solid"></div>
+                  <div class="accent-tint">Aa</div>
+                </div>
+                <h4>Teal</h4>
+                <p class="swatch-code">Foreground: #13776C<br>Tint: #EDF7F5</p>
+                <p class="swatch-role">Explanatory callouts: definitions, worked examples, and supporting explanations.</p>
+                <p class="accent-details">On white: <span class="mono" data-contrast="accent-teal">5.41:1</span><br>On tint: <span class="mono" data-contrast="accent-teal" data-background="accent-teal-soft">4.95:1</span></p>
+              </div>
+              <div class="accent-card accent--amber">
+                <div class="accent-pair">
+                  <div class="accent-solid"></div>
+                  <div class="accent-tint">Aa</div>
+                </div>
+                <h4>Amber</h4>
+                <p class="swatch-code">Foreground: #965B13<br>Tint: #FFF5E7</p>
+                <p class="swatch-role">Occasional important qualifications that materially affect interpretation or a decision.</p>
+                <p class="accent-details">On white: <span class="mono" data-contrast="accent-amber">5.52:1</span><br>On tint: <span class="mono" data-contrast="accent-amber" data-background="accent-amber-soft">5.12:1</span></p>
+              </div>
+            </div>
+            <div class="accent-context">
+              <div>
+                <h4 class="subheading">Primary emphasis</h4>
+                <p>Connect <mark class="highlight">mathematical understanding</mark> with implementation.</p>
+                <p><a class="accent-link" href="../2026/06/04/we-code-to-understand/">We Code to Understand</a></p>
+                <p class="sample-note">Use blue selectively. Keep ordinary text and headings charcoal.</p>
+              </div>
+              <div>
+                <h4 class="subheading">An explanation</h4>
+                <aside class="note" aria-label="Example definition"><span class="note-label">Definition</span>A sample mean is the sum of the observed values divided by the number of observations.</aside>
+                <p class="sample-note">Teal label and left border, optional tint, charcoal body text.</p>
+              </div>
+            </div>
+            <div class="accent-context">
+              <div>
+                <h4 class="subheading">An important qualification</h4>
+                <aside class="note accent--amber" aria-label="Illustrative qualification"><span class="note-label">Interpretation limit</span>A sample mean describes the observed values. Applying it to a wider population requires a sampling design and assumptions that support that inference.</aside>
+                <p class="sample-note">Illustrative wording. Use amber when the qualification materially affects interpretation.</p>
+              </div>
+              <div>
+                <h4 class="subheading">Ordinary supporting information</h4>
+                <div class="tags"><span class="tag">Computational essay</span><span class="tag">Wolfram Language</span></div>
+                <p class="sample-note">Keep metadata, labels, and routine notes neutral. An ordinary scope note does not automatically require amber.</p>
+              </div>
+            </div>
+            <p class="sample-note">Apply one assigned accent consistently within a callout. Keep its body text charcoal and its meaning explicit in the label. Keyboard focus is always blue.</p>
+          </div>
+          <div class="rule-grid">
+            <div>
+              <h3>Links stay recognizable</h3>
+              <p>Inline links are underlined. Hover increases the underline’s weight.</p>
+            </div>
+            <div>
+              <h3>Focus is visible</h3>
+              <p>A blue outline appears for keyboard focus. It has a functional role.</p>
+            </div>
+            <div>
+              <h3>Meaning stays explicit</h3>
+              <p>A meaningful label communicates the purpose of a callout alongside its color.</p>
+            </div>
+          </div>
+        </section>
+        <section id="layout" class="section">
+          <div class="section-heading"><h2>Layout &amp; spacing</h2><span class="index">03</span></div>
+          <p class="section-description">A four-pixel base creates a consistent rhythm. Short gaps connect related details; larger gaps separate ideas.</p>
+          <div class="component-grid">
+            <div class="sample">
+              <h3 class="subheading">Spacing scale</h3>
+              <div class="space-list">
+                <div class="space-row"><span class="mono">4 px</span><div class="space-bar" style="--bar:0.25rem"></div></div>
+                <div class="space-row"><span class="mono">8 px</span><div class="space-bar" style="--bar:0.5rem"></div></div>
+                <div class="space-row"><span class="mono">12 px</span><div class="space-bar" style="--bar:0.75rem"></div></div>
+                <div class="space-row"><span class="mono">16 px</span><div class="space-bar" style="--bar:1rem"></div></div>
+                <div class="space-row"><span class="mono">24 px</span><div class="space-bar" style="--bar:1.5rem"></div></div>
+                <div class="space-row"><span class="mono">32 px</span><div class="space-bar" style="--bar:2rem"></div></div>
+                <div class="space-row"><span class="mono">48 px</span><div class="space-bar" style="--bar:3rem"></div></div>
+                <div class="space-row"><span class="mono">64 px</span><div class="space-bar" style="--bar:4rem"></div></div>
+                <div class="space-row"><span class="mono">96 px</span><div class="space-bar" style="--bar:6rem"></div></div>
+              </div>
+            </div>
+            <div class="sample flow">
+              <h3 class="subheading">How it is used</h3>
+              <p><strong>8–12 px</strong><br><span class="muted">Labels, metadata, and closely related items.</span></p>
+              <p><strong>16–32 px</strong><br><span class="muted">Text blocks, component padding, and project details.</span></p>
+              <p><strong>48–96 px</strong><br><span class="muted">Sections and major changes of subject.</span></p>
+            </div>
+          </div>
+          <div class="layout-preview">
+            <div class="page-width">Main content: up to 1,152 px</div>
+            <div class="reading-width">Reading width: up to 65ch</div>
+          </div>
+          <p class="sample-note">Outer gutters use 4% of viewport width, from 20 to 64 px. The 65ch reading measure is based on the font’s “0” character, not a literal character count. Columns stack as space narrows; general copy stays 18 px at default settings.</p>
+          <div class="rule-grid">
+            <div>
+              <h3>One alignment</h3>
+              <p>Left-align headings, prose, and metadata. Center equations within their reading context.</p>
+            </div>
+            <div>
+              <h3>Restrained corners</h3>
+              <p>Callouts use a 4 px radius and 16 px padding on all four sides. Buttons have fully rounded ends.</p>
+            </div>
+            <div>
+              <h3>Purposeful motion</h3>
+              <p>Brief feedback for hover and focus. Respect reduced-motion preferences.</p>
+            </div>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Website layout</h3>
+            <div class="table-wrap" role="region" aria-label="Website layout">
+              <table>
+                <caption>Website layout</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Property</th>
+                    <th scope="col">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Maximum main content width</th>
+                    <td>1,152 px, centered</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Maximum prose width</th>
+                    <td>65ch</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Outer horizontal gutters</th>
+                    <td>4% of viewport width, with a minimum of 20 px and a maximum of 64 px</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spacing scale</th>
+                    <td>4, 8, 12, 16, 24, 32, 48, 64, and 96 px</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Between prose paragraphs</th>
+                    <td>24 px</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Before a major section heading within prose</th>
+                    <td>48 px</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Before a subsection heading within prose</th>
+                    <td>32 px</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Between a prose heading and its following content</th>
+                    <td>24 px</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Document layout</h3>
+            <div class="table-wrap" role="region" aria-label="Document layout">
+              <table>
+                <caption>Document layout</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Property</th>
+                    <th scope="col">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Default page</th>
+                    <td>A4 portrait, 210 × 297 mm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Page margins</th>
+                    <td>25.4 mm on all sides</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Main layout</th>
+                    <td>One column</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Body alignment</th>
+                    <td>Left aligned</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">First-line paragraph indent</th>
+                    <td>None</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Between body paragraphs</th>
+                    <td>8 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Major section heading spacing</th>
+                    <td>24 pt before, 12 pt after</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Subsection heading spacing</th>
+                    <td>16 pt before, 8 pt after</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lower-level heading spacing</th>
+                    <td>12 pt before, 8 pt after</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Page numbers</th>
+                    <td>Bottom right, using the approved metadata typography</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Presentation layout</h3>
+            <div class="table-wrap" role="region" aria-label="Presentation layout">
+              <table>
+                <caption>Presentation layout</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Property</th>
+                    <th scope="col">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Main content margins</th>
+                    <td>48 pt on all sides</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Default alignment</th>
+                    <td>Left aligned</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Default layout</th>
+                    <td>One column; two columns for comparisons or paired content</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gap between columns</th>
+                    <td>24 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Between the slide title and main content</th>
+                    <td>24 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Between distinct content groups</th>
+                    <td>24 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Between bullet items</th>
+                    <td>12 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Between an illustration or table and its caption</th>
+                    <td>8 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Footer placement, when needed</th>
+                    <td>Text box bottom edge 48 pt from the slide’s bottom edge</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Footer alignment</th>
+                    <td>Source credits on the left; slide number on the right</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Clearance above the footer</th>
+                    <td>At least 24 pt</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section id="components" class="section">
+          <div class="section-heading"><h2>Components</h2><span class="index">04</span></div>
+          <p class="section-description">Examples use the site’s navigation, writing, and projects.</p>
+          <div class="subsection">
+            <h3 class="subheading">Navigation</h3>
+            <div class="sample">
+              <div class="sample-nav"><a class="masthead-brand" href="../">Junseo Lee</a><nav class="site-nav" aria-label="Example website navigation"><a href="../" aria-current="page">About</a><a href="../posts/">Writings</a><a href="../projects/">Projects</a></nav></div>
+              <p class="sample-note">Sentence case, consistent touch targets, and an underline for the current page.</p>
+            </div>
+          </div>
+          <div class="subsection component-grid">
+            <div class="sample"><h3 class="subheading">Actions and links</h3><div class="button-row"><a class="button" href="../projects/">View projects <span aria-hidden="true">↗</span></a><a class="button button--secondary" href="../posts/">Read writings</a></div><a class="text-link" href="https://github.com/junseolee7">GitHub <span aria-hidden="true">↗</span></a></div>
+            <div class="sample">
+              <h3 class="subheading">Labels and metadata</h3>
+              <div class="tags"><span class="tag">Computational essay</span><span class="tag">Wolfram Language</span><span class="tag">Education</span></div>
+              <dl class="metadata article-meta">
+                <div>
+                  <dt>Author:</dt>
+                  <dd>Junseo Lee</dd>
+                </div>
+                <div>
+                  <dt>Published:</dt>
+                  <dd><time datetime="2026-06-04">June 4, 2026</time></dd>
+                </div>
+              </dl>
+              <p class="sample-note">Labels describe the work. They use readable contrast and regular text.</p>
+            </div>
+          </div>
+          <div class="subsection">
+          <h3 class="subheading">Project entries</h3>
+          <a class="project-entry" href="https://community.wolfram.com/groups/-/m/t/3603794"><div><span class="eyebrow">Computational essay</span><h3>Loss Landscape Across the Double Descent Curve</h3><p>This essay analyzes the relationship between model capacity and the flatness of minimizers across the double descent curve.</p><div class="tags"><span class="tag">Wolfram Community Editorial Board Staff Picks</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="project-entry" href="https://wolframclub.notion.site/homepage"><div><span class="eyebrow">Educational workshop</span><h3>Computational Essay Workshops for STEM Undergraduates</h3><p>A faculty-advised research program with the aim of cultivating computational thinking and strengthening technical communication skills through writing computational essays in the Wolfram Language.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <p class="sample-note">Entries share the same structure and prominence. A project’s research, implementation, and teaching contributions can be explained within it.</p>
+        </div>
+          <div class="subsection">
+          <h3 class="subheading">Writing entry</h3>
+          <a class="project-entry" href="../2026/06/04/we-code-to-understand/"><div><span class="eyebrow">Category: Education<br>Published: <time datetime="2026-06-04">June 4, 2026</time></span><h3>We Code to Understand</h3><p>How shifting from mathematical to computational thinking — and from consuming to producing knowledge — is reshaping STEM education.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+          <div class="type-reference">
+            <h3 class="subheading">Component measurements</h3>
+            <div class="table-wrap" role="region" aria-label="Component measurements">
+              <table>
+                <caption>Component measurements</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Measurement</th>
+                    <th scope="col" class="number">Websites</th>
+                    <th scope="col" class="number">Documents</th>
+                    <th scope="col" class="number">Presentations</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Callout inner padding</th>
+                    <td class="number">16 px</td>
+                    <td class="number">12 pt</td>
+                    <td class="number">18 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Callout left-border thickness</th>
+                    <td class="number">2 px</td>
+                    <td class="number">1.5 pt</td>
+                    <td class="number">2 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Callout corner radius</th>
+                    <td class="number">4 px</td>
+                    <td class="number">3 pt</td>
+                    <td class="number">4 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table horizontal-rule thickness</th>
+                    <td class="number">1 px</td>
+                    <td class="number">0.75 pt</td>
+                    <td class="number">1 pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Table cell padding, vertical / horizontal</th>
+                    <td class="number">16 / 16 px</td>
+                    <td class="number">6 / 8 pt</td>
+                    <td class="number">8 / 12 pt</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Website interactions</h3>
+            <div class="table-wrap" role="region" aria-label="Website interactions">
+              <table>
+                <caption>Website interactions</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Element</th>
+                    <th scope="col">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Inline text links</th>
+                    <td>Underlined; use blue for selected references and primary emphasis</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Link hover</th>
+                    <td>Increase underline thickness from 1 px to 2 px</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Navigation labels</th>
+                    <td>Sentence case; underline the current page</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Primary button</th>
+                    <td>Charcoal background, white text</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Primary button hover</th>
+                    <td>Background changes to <code>#363636</code></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Secondary button</th>
+                    <td>White background, charcoal text, 1 px <code>#858585</code> border</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Secondary button hover</th>
+                    <td>Background changes to <code>#EDEDED</code></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Button dimensions</th>
+                    <td>Minimum height 44 px; horizontal padding 20 px; vertically centered text</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Button shape</th>
+                    <td>Fully rounded ends</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Keyboard focus</th>
+                    <td>Blue outline, 2 px thick, offset 5 px from the element</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Simple transitions</th>
+                    <td>160 ms with <code>ease</code> timing</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="sample-note">Controls grow when labels wrap or text is enlarged. Keyboard focus appears immediately. Essential information and actions remain available without hover. Optional transitions are disabled when reduced motion is requested.</p>
+          </div>
+        </section>
+        <section id="writing" class="section">
+          <div class="section-heading"><h2>Technical writing</h2><span class="index">05</span></div>
+          <p class="section-description">Prose, mathematics, code, and tables share a consistent hierarchy. Research figures and diagrams are outside this version’s scope.</p>
+          <div class="sample article-sample">
+            <article class="prose" aria-labelledby="article-example-title">
+          <header><span class="eyebrow muted">Article specimen</span><h3 class="article-title" id="article-example-title">We Code to Understand</h3><p class="article-meta">By Junseo Lee<br>Published on <time datetime="2026-06-04">June 4, 2026</time></p></header>
+          <p>Formal thinking, the cognitive ability to reason abstractly and logically, is one of the most important aspects of human reasoning. For a long time, the central form this took was mathematical thinking, which involves formulating real-world problems as mathematical expressions and manipulating them symbolically.</p>
+          <h4>The Computational Essay</h4>
+          <p>The text sets up the idea, the description previews the computation, the code specifies it precisely in a manner that both a human can understand and a computer can process, and the output delivers the computed results.</p>
+          <blockquote>
+                <p>“We code to understand.”</p>
+                <p class="sample-note">Wolfram Computational Research Club</p>
+              </blockquote>
+          <p class="sample-note">Excerpts from your existing article. The writing is preserved.</p>
+        </article>
+          </div>
+          <div class="subsection writing-example">
+            <h3 class="subheading">Equations, code, and tables</h3>
+            <p class="muted reading">A small illustrative example shows how a definition, implementation, and result can share a consistent reading rhythm.</p>
+            <div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="x bar equals one over n times the sum of x sub i, for i from one to n"><mrow><mover><mi>x</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>i</mi></msub></mrow></math><span class="equation-number">(1)</span></div>
+            <p class="sample-note">Equations use mathematical typesetting. Surrounding text and equation numbers follow the shared system.</p>
+            <div class="code-sample"><div class="sample-label"><span>Python</span><span>Illustrative example</span></div><pre aria-label="Python code example"><code><span class="code-comment"># A small example of a sample mean.</span>
+observations = [1, 2, 3]
+sample_mean = sum(observations) / len(observations)
+print(sample_mean)  <span class="code-comment"># 2.0</span></code></pre></div>
+            <div class="table-wrap" role="region" aria-label="Illustrative sample-mean table">
+              <table>
+                <caption>Example inputs and result</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Definition</th>
+                    <th scope="col" class="number">Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Observations</th>
+                    <td>Illustrative input values</td>
+                    <td class="number">1, 2, 3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sample size</th>
+                    <td>Number of observations</td>
+                    <td class="number">3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sample mean</th>
+                    <td>Sum divided by sample size</td>
+                    <td class="number">2.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="sample-note">Numeric columns align right and use tabular figures. Wide tables and code blocks scroll within the reading column.</p>
+          </div>
+          <div class="type-reference">
+            <h3 class="subheading">Editorial conventions</h3>
+            <div class="table-wrap" role="region" aria-label="Editorial conventions">
+              <table>
+                <caption>Editorial conventions</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Convention</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Headings and labels</th>
+                    <td>Use sentence case. Preserve the established capitalization of proper names, acronyms, and cited titles.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Metadata</th>
+                    <td>Use natural sentences, separate lines, or labeled fields. Do not use dots to separate metadata items or standalone words and phrases.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Emphasis</th>
+                    <td>Use bold selectively for important wording. Use italics where appropriate for titles, terminology, or established notation.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lists</th>
+                    <td>Use lists for parallel items or sequential steps. Use connected prose for explanations that develop an argument.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Dates and times</th>
+                    <td>Use unambiguous reader-facing dates, such as “September 6, 2026.” Include a time zone when interpreting a time depends on it.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Links and attribution</th>
+                    <td>Use descriptive link text. Identify sources clearly and retain necessary attribution for borrowed material. Follow required citation conventions.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Numbers and units</th>
+                    <td>State units clearly. Use consistent formatting for comparable values while preserving meaningful precision.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mathematics and code</th>
+                    <td>Use proper mathematical typesetting. Preserve notation, code characters, and meaningful indentation.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Illustrative examples</th>
+                    <td>Identify examples as illustrative when readers could otherwise mistake them for actual findings or results.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <footer class="spec-footer"><dl class="metadata">
+            <div>
+              <dt>Standard:</dt>
+              <dd>Junseo Lee Design Standard</dd>
+            </div>
+            <div>
+              <dt>Version:</dt>
+              <dd>1.0</dd>
+            </div>
+            <div>
+              <dt>Status:</dt>
+              <dd>Approved</dd>
+            </div>
+          </dl><a href="../Junseo-Lee-Design-Standard.md">Read the governing specification</a><a href="#overview">Back to top</a></footer>
+      </main>
+    </div>
+  <script src="../assets/site.js" defer></script>
+  <script src="specimen.js" defer></script>
+</body>
+</html>

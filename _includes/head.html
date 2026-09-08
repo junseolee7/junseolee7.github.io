@@ -1,33 +1,18 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="preload" href="{{ '/design-system/assets/SourceSans3-VariableFont_wght.ttf' | relative_url }}" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="{{ '/design-system/tokens.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/design-system/components.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  <script src="{{ '/assets/site.js' | relative_url }}" defer></script>
   {%- feed_meta -%}
 
-  {%- comment -%} Favicon (was unlinked; SVG already shipped in assets). {%- endcomment -%}
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
-
-  <!-- Adobe Fonts (Typekit) — Adobe Garamond Pro for display surfaces.
-       Swap YOUR_KIT_ID for the kit ID from your Adobe Fonts Web Project.
-       Family CSS name: adobe-garamond-pro (weights 400, 600, 700; italic 400, 600, 700) -->
-  <link rel="preconnect" href="https://use.typekit.net">
-  <link rel="stylesheet" href="https://use.typekit.net/hwy7udz.css">
-
-  <!-- Source Serif 4 / Source Sans 3 / JetBrains Mono are self-hosted under
-       /assets/fonts/ via @font-face declarations at the top of main.scss. -->
-
-  {%- comment -%}
-  Load MathJax only on pages that opt in via `math: true` front matter
-  (or site-wide via `site.math_everywhere: true`). Avoids a ~1MB script
-  on pages with no math.
-  {%- endcomment -%}
+  {%- comment -%} Load MathJax only when a page or the site enables math. {%- endcomment -%}
   {%- if page.math or site.math_everywhere -%}
     <script>
       MathJax = {
@@ -45,24 +30,4 @@
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   {%- endif -%}
 
-  <!-- Open external links in new tab + wrap tables for mobile scroll -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var host = window.location.hostname;
-      document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-        if (!link.hostname.includes(host)) {
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
-        }
-      });
-      document.querySelectorAll('.post-content table').forEach(function(table) {
-        if (!table.parentElement.classList.contains('table-wrapper')) {
-          var wrapper = document.createElement('div');
-          wrapper.className = 'table-wrapper';
-          table.parentNode.insertBefore(wrapper, table);
-          wrapper.appendChild(table);
-        }
-      });
-    });
-  </script>
 </head>
