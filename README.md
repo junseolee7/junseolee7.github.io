@@ -1,6 +1,6 @@
 # Junseo Lee’s website
 
-Jekyll source for the profile, writings, projects, and services at the domain in `_config.yml` and `CNAME`.
+Jekyll source for the profile, writings, and projects at the domain in `_config.yml` and `CNAME`.
 
 ## Build
 
@@ -17,7 +17,7 @@ bundle exec jekyll serve
 - Profile: `index.md`
 - Writings: `_posts/YYYY-MM-DD-title.md`
 - Projects: `_projects/`
-- Services, enrollment links, and policies: `_services/`
+- Archived services, enrollment links, and policies: `archived/services/` (excluded from the website build)
 - Page structure: `_layouts/` and `_includes/`
 
 Collection metadata uses YAML lists. Set `math: true` in a page’s front matter to load MathJax.
@@ -34,4 +34,4 @@ Collection metadata uses YAML lists. Set `math: true` in a page’s front matter
 
 Fonts and their licenses are in `design-system/assets/`; content images are in `assets/images/`. Templates are local; no Jekyll theme is enabled.
 
-Before publishing, build and review desktop and mobile pages, navigation, tables, images, and enrollment links.
+Before publishing, build and review desktop and mobile pages, navigation, tables, images, and links.

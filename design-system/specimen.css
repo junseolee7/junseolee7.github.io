@@ -324,6 +324,10 @@ main {
   margin-top: var(--space-12);
 }
 
+.type-reference > p + p {
+  margin-top: var(--space-4);
+}
+
 .type-reference .table-wrap {
   margin-top: var(--space-6);
 }

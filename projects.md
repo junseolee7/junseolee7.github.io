@@ -13,7 +13,7 @@ wide: true
   </div>
 </section>
 <section class="index-section">
-  <h2>Computational essays</h2>
+  <h2>Computational Essays</h2>
   <div class="entry-list">
     {% assign essay_projects = site.projects | where: 'section', 'essays' | sort: 'order' %}
     {% for project in essay_projects %}{% include project-card.html project=project %}{% else %}<p>Essays will appear here as they are published.</p>{% endfor %}

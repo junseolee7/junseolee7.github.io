@@ -36,9 +36,6 @@ kramdown:
 
 # Collections
 collections:
-  services:
-    output: true
-    permalink: /services/:path/
   projects:
     output: false
 
@@ -49,6 +46,7 @@ exclude:
   - vendor/
   - node_modules/
   - README.md
+  - archived/
   - .obsidian/
   - .DS_Store
 
