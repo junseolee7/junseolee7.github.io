@@ -47,7 +47,7 @@ layout: default
         <span class="cv-dates">August 2025 – present</span>
         <div class="cv-body">
           <p class="cv-role">Wolfram Student Ambassador</p>
-          <p class="cv-note">Promoting the adoption of the Wolfram Language in STEM by publishing computational essays and creating educational resources.</p>
+          <p class="cv-note">Develop and publish computational essays and educational resources demonstrating applications of the Wolfram Language in mathematics, data science, and scientific computing.</p>
         </div>
       </li>
     </ul>
