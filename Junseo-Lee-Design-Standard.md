@@ -22,6 +22,8 @@ Junseo Lee’s visual identity is clear, precise, and understated. Typography, s
 
 Consistency comes from shared design choices that remain recognizable across formats. Layout, scale, and density adapt to the medium, audience, and reading conditions while preserving that identity.
 
+Website favicon and touch icons are intentionally unset pending selection of an icon.
+
 This document is the governing specification. Implementation files must follow the approved rules below.
 
 ## 2. Typeface roles and units
