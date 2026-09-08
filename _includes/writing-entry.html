@@ -1,0 +1,9 @@
+{% assign entry = include.post %}
+<li class="writing-entry">
+  <time datetime="{{ entry.date | date_to_xmlschema }}">{{ entry.date | date: '%B %-d, %Y' }}</time>
+  <div>
+    <h3><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
+    {% if entry.description %}<p>{{ entry.description | escape }}</p>{% endif %}
+    {% if entry.tags.size > 0 %}<div class="tags">{% for tag in entry.tags %}<span class="tag">{{ tag | escape }}</span>{% endfor %}</div>{% endif %}
+  </div>
+</li>

@@ -1,25 +1,13 @@
-{%- assign s = include.service -%}
-<a href="{{ s.url | relative_url }}" class="card">
-  <span class="card-glyph" aria-hidden="true">
-    {%- if s.image -%}
-      <img src="{{ s.image | relative_url }}" alt="">
-    {%- else -%}
-      {{ s.glyph | default: "·" }}
-    {%- endif -%}
-  </span>
-  <div class="card-body">
-    <h2 class="card-title">{{ s.title | escape }}</h2>
-    {%- if s.metadata -%}
-      <div class="card-metadata">
-        {%- assign meta_items = s.metadata | split: " · " -%}
-        {%- for item in meta_items -%}
-          <span class="tag">{{ item }}</span>
-        {%- endfor -%}
+{% assign s = include.service %}
+<a href="{{ s.url | relative_url }}" class="project-entry">
+  <div>
+    <h3>{{ s.title | escape }}</h3>
+    {% if s.summary %}<p>{{ s.summary | escape }}</p>{% endif %}
+    {% if s.metadata %}
+      <div class="tags">
+        {% for item in s.metadata %}<span class="tag">{{ item | escape }}</span>{% endfor %}
       </div>
-    {%- endif -%}
-    {%- if s.summary -%}
-      <p class="card-summary">{{ s.summary }}</p>
-    {%- endif -%}
+    {% endif %}
   </div>
-  <span class="card-arrow" aria-hidden="true">→</span>
+  <span class="arrow" aria-hidden="true">→</span>
 </a>

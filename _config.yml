@@ -3,20 +3,18 @@ title: Junseo Lee
 email: junseo.lee.1@stonybrook.edu
 description: "Exploring statistics, data science, and finance"
 baseurl: ""                         # subpath, e.g. /blog
-url: "https://www.eigenjs.com"      # base hostname & protocol
-github_username: eigenjs7
+url: "https://www.junseolee.dev"      # base hostname & protocol
+github_username: junseolee7
 linkedin_username: pauljunseo
 author: Junseo Lee
 
 # Social / OG — image is used by jekyll-seo-tag for og:image and twitter:image.
-# Profile photo fills in until a dedicated 1200x630 share image is made.
 image: /assets/images/profile.jpg
 twitter:
   card: summary
 
 # Build
 timezone: Asia/Seoul
-theme: minima
 permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
@@ -25,14 +23,15 @@ plugins:
 
 # Markdown / math
 markdown: kramdown
+# Keep supporting Markdown documents available as files. Pages declare front matter.
+optional_front_matter:
+  enabled: false
 kramdown:
   math_engine: mathjax
   math_engine_opts: {}
   input: GFM
   syntax_highlighter: rouge
-  # Append the text variation selector (U+FE0E) so iOS Safari renders the
-  # footnote back-link as a plain glyph, not the ↩️ emoji chip. Same trick
-  # the site uses for the external-link arrow (↗︎).
+  # Keep footnote backlinks as text glyphs on iOS.
   footnote_backlink: "&#8617;&#xFE0E;"
 
 # Collections
@@ -49,15 +48,11 @@ exclude:
   - Gemfile.lock
   - vendor/
   - node_modules/
-  - AUDIT.md
-  - DESIGN_SYSTEM.md
   - README.md
-  - USER_GUIDE.md
-  - _templates/
   - .obsidian/
   - .DS_Store
 
-# Default front matter so every post gets sane defaults.
+# Post defaults.
 defaults:
   - scope:
       path: ""

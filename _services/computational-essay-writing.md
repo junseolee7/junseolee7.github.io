@@ -3,7 +3,10 @@ layout: service
 section: consulting
 title: "Computational Essay Writing Mentorship"
 summary: "One-on-one mentorship taking a high school student from a first idea to a published computational essay in the Wolfram Language."
-metadata: "Portfolio Building · Computational Thinking · Wolfram Language"
+metadata:
+  - Portfolio building
+  - Computational thinking
+  - Wolfram Language
 order: 1
 permalink: /services/computational-essay-writing/
 register_url: "https://forms.gle/JJeQ8WZQUeNBdFq56"
@@ -23,11 +26,11 @@ Working towards one real essay, the student develops three core competencies (co
 
 To learn more about the pedagogical approach of this program, please refer to this article.
 
-{% include post-card.html title="We Code to Understand" url="/2026/06/04/we-code-to-understand/" metadata="Education · Computational Thinking" summary="How computational essay writing in the Wolfram Language trains higher-level cognitive skills in STEM students, moving them from consuming knowledge to producing it." %}
+{% include post-card.html title="We Code to Understand" url="/2026/06/04/we-code-to-understand/" summary="How computational essay writing in the Wolfram Language trains higher-level cognitive skills in STEM students, moving them from consuming knowledge to producing it." %}
 
 {% include youtube.html id="E5-V-XLmroY" title="Computational Essay Writing Mentorship" %}
 
-## What a Computational Essay Looks Like
+## What a computational essay looks like
 
 While a general introduction can be found in [Stephen Wolfram's writing](https://writings.stephenwolfram.com/2017/11/what-is-a-computational-essay/), a computational essay is easiest to understand by reading one.
 
@@ -48,9 +51,9 @@ The computational essays that the mentor has guided can be found [here](https://
 - [Range of motion during disk desiccation and spinal arthrodesis using Lagrangian mechanics](https://community.wolfram.com/groups/-/m/t/3752279) — Ahaan Gupta. *Wolfram Community*, Staff Picks, July 9, 2026.
 - [TSVD and autoencoder for image restoration: a comparative study](https://community.wolfram.com/groups/-/m/t/3726674) — Jaekyung Seol. *Wolfram Community*, Staff Picks, June 3, 2026.
 
-## Mentor Profile
+## Mentor profile
 
-{% include profile-card.html name="Junseo Lee" role="Mentor · Subject Advisor in Data Analysis" href="/" image="/assets/images/profile.jpg" %}
+{% include profile-card.html name="Junseo Lee" role="Mentor and subject advisor in data analysis" href="/" image="/assets/images/profile.jpg" %}
 
 Junseo is a rising junior at **Stony Brook University** majoring in **Applied Mathematics and Statistics**. His interests sit where statistical theory meets applied questions in finance and machine learning, and he is currently researching multiple testing procedures for quantitative finance.
 
@@ -63,7 +66,7 @@ Junseo is a rising junior at **Stony Brook University** majoring in **Applied Ma
 - [Level 2 Certificate in Applied Expertise in Computational Research](https://www.wolframcloud.com/obj/online-courses/certificates/level2-computational-research/a03904fc-0c67-4c90-9854-ec20e89e349a/2.html) from Wolfram
 - Founded and leads the [Wolfram Computational Research Club](https://wolframclub.notion.site/homepage) at SUNY Korea, and has guided over [11 computational essays](https://wolframclub.notion.site/clubgallery#2e799f19acb880039501f8bb1c03aca2) from drafting to publication
 
-## Subject Advisors
+## Subject advisors
 
 Subject advisors bring domain-specific expertise to the mentorship when a student's project needs it. An advisor joins a session when a project falls within their field, and their roles include:
 
@@ -95,7 +98,7 @@ Sindhoora is an incoming freshman at **Stanford University** majoring in **Bioen
 - Co-author of [Established and Novel Methods for Protein Analysis in Wolfram Language](https://community.wolfram.com/groups/-/m/t/3379964) (2024–25), implementing protein analysis techniques such as alpha complexes and Zernike moments and developing a novel Monte Carlo algorithm for estimating protein internal surface area
 - Author of [Analyzing Polysaccharide Bonding in Cryptococcus neoformans](https://community.wolfram.com/groups/-/m/t/3214184) (2024), using MMFF-based conformational analysis to investigate the preferred structures and energy landscapes of glucuronic acid, mannose, and xylose
 
-## Mentorship Outcomes
+## Mentorship outcomes
 
 By the end of the mentorship, the student will have produced and published a complete computational essay, and built the competencies behind it:
 1. **Computational thinking**: formulate a question and frame it as a problem that can be explored computationally.
@@ -144,7 +147,7 @@ The number of sessions depends on the scope of the project and is agreed at the 
 - **Scheduling**: Cancellation of a scheduled session by the student must be reported at least 24 hours in advance. Sessions cancelled with proper notice are rescheduled at no cost. Cancellations made less than 24 hours in advance are treated as no-shows and charged in full. A late arrival does not extend the session beyond its scheduled end time.
 - **Payment**: The payment must be made before each session.
 
-## Getting Started
+## Getting started
 
 Start by filling out the below form to describe the student's background, their experience with programming, and one or two topics they might want to explore, if they have any in mind.
 
