@@ -360,6 +360,10 @@ body, main, section, article, .wrapper {
   margin: 0;
 }
 
+.prose .related-writing h3 {
+  margin-top: 0;
+}
+
 .prose .profile-card {
   display: flex;
   align-items: center;
@@ -421,7 +425,7 @@ th[align=right], td[align=right] {
   border: 0;
 }
 
-.prose img {
+.prose img:not(.profile-card-photo) {
   margin-inline: auto;
 }
 
