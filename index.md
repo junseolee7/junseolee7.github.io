@@ -93,7 +93,7 @@ layout: default
       <li>
         <span class="cv-dates">September 2025 – present</span>
         <div class="cv-body">
-          <p class="cv-role">Founder &amp; President, <a href="https://wolframclub.notion.site/homepage">Wolfram Computational Research Club</a> at SUNY Korea</p>
+          <p class="cv-role">Founder &amp; President, Wolfram Computational Research Club at SUNY Korea</p>
           <p class="cv-note">A faculty-advised research club cultivating computational thinking and technical communication through computational essays in the Wolfram Language.</p>
         </div>
       </li>
