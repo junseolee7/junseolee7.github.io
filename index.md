@@ -51,7 +51,7 @@ layout: default
         </div>
       </li>
       <li>
-        <span class="cv-dates">Summer 2026</span>
+        <span class="cv-dates">June 22–July 12, 2026</span>
         <div class="cv-body">
           <p class="cv-location">Bentley University, Boston, MA</p>
           <p class="cv-role">Mentor, Wolfram High School Summer Research Program</p>
@@ -64,7 +64,7 @@ layout: default
     <h2>Teaching Experience</h2>
     <ul class="cv-entries">
       <li>
-        <span class="cv-dates">Summer 2026</span>
+        <span class="cv-dates">June 22–July 12, 2026</span>
         <div class="cv-body">
           <p class="cv-location">Bentley University, Boston, MA</p>
           <p class="cv-role">Mentor, Wolfram High School Summer Research Program</p>
@@ -82,12 +82,6 @@ layout: default
         <div class="cv-body">
           <p class="cv-location">Stony Brook University</p>
           <p class="cv-role">Teaching Assistant, AMS 210: Applied Linear Algebra</p>
-        </div>
-      </li>
-      <li>
-        <div class="cv-body">
-          <p class="cv-location">Stony Brook University</p>
-          <p class="cv-role">Tutor, AMS 210: Applied Linear Algebra and AMS 161: Applied Calculus II</p>
         </div>
       </li>
     </ul>
@@ -110,7 +104,7 @@ layout: default
     <h2>Invited talks</h2>
     <ul class="cv-entries">
       <li>
-        <span class="cv-dates">April 2026</span>
+        <span class="cv-dates">April 10, 2026</span>
         <div class="cv-body">
           <p class="cv-location">Korea Mathematica User Conference</p>
           <p class="cv-role">Wolfram Language and Computational Essay in STEM Education: A Student-Led Initiative at SUNY Korea</p>
