@@ -127,7 +127,7 @@ layout: default
   </section>
 
   <section class="cv-section">
-    <h2>Certificate &amp; Licenses</h2>
+    <h2>Certificates</h2>
     <ul class="cv-entries">
       <li>
         <span class="cv-dates">January 2026</span>
