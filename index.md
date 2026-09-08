@@ -120,6 +120,7 @@ layout: default
         <span class="cv-dates">May 8, 2026</span>
         <div class="cv-body">
           <p class="cv-role">Successful Participant, 2026 Mathematical Contest In Modeling (MCM)</p>
+          <p class="cv-location">Consortium for Mathematics and its Applications (COMAP)</p>
         </div>
       </li>
     </ul>
