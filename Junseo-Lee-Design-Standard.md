@@ -71,11 +71,15 @@ Apply the body-text rule to the individual text block:
 - General website copy includes introductions and standalone summaries. Descriptions in About, Projects, and Writings lists use the shared item-description treatment below.
 - Sustained reading includes articles, essays, and long explanatory passages.
 
-Profile entries use a 32 px section heading, an 18 px semibold item title in charcoal, and a 16 px regular description in secondary gray. Keep an 8 px gap between the item title and description. This applies across education, experience, leadership, invited talks, and recognition. Dates and location labels share the 14 px regular metadata treatment with 1.50 line height. Location labels use the palette's teal; dates use secondary gray and place names within titles remain charcoal.
+Profile entries use a 32 px section heading, an 18 px semibold item title in charcoal, and a 16 px regular description in secondary gray. Keep an 8 px gap between the item title and description. This applies across education, experience, leadership, invited talks, honors and awards, and certificates and licenses. Dates and location labels share the 14 px regular metadata treatment with 1.50 line height. Place each location or venue label above its item title with an 8 px gap. Location labels use the palette's teal; dates use secondary gray and place names within titles remain charcoal.
 
 Descriptions in About, Projects, and Writings lists share one typography rule: 16 px, weight 400, 1.60 line height, and secondary gray (`#595959`). The same rule applies to archive entries, related-writing cards, and the design-reference examples. Site layouts must not override this description typography; dates, locations, and recognition labels retain their metadata treatments.
 
 Separate consecutive profile entries with a 1 px light-gray rule (`#DEDEDE`) spanning the entry column, with 16 px of space on each side. Add rules only between entries; the section retains its own full-width divider.
+
+Keep Honors & Awards separate from Certificate & Licenses. List repeated honors' terms one per line in the date field, without repeating them in the description. Use the shared profile list component for both sections.
+
+Project recognition labels appear above the item title with an 8 px gap; recognition links use the palette's blue. Tags stay below the description. Dates, location labels, recognition labels, and tags share a single typography rule: 14 px, weight 400, and 1.50 line height. Tags remain neutral and compact, with white background, secondary-gray text, a 1 px light-gray border, 4 px corner radius, and 0 px vertical / 8 px horizontal padding. Separate tags by 8 px and place their group 16 px below the description.
 
 Use semantic heading levels to represent document structure. Use the display treatment selectively where the composition calls for additional prominence. A lead paragraph is an introduction given additional prominence.
 

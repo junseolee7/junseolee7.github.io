@@ -2,9 +2,9 @@
 {% assign href = p.external_url | default: p.url %}
 <a href="{{ href | relative_url }}" class="project-entry">
   <div>
+    {% if p.badge %}<p class="recognition">{{ p.badge | escape }}</p>{% endif %}
     <h3>{{ p.title | escape }}</h3>
     {% if p.summary %}<p>{{ p.summary | escape }}</p>{% endif %}
-    {% if p.badge %}<p class="recognition">{{ p.badge | escape }}</p>{% endif %}
     {% if p.metadata %}
       <div class="tags">
         {% for item in p.metadata %}<span class="tag">{{ item | escape }}</span>{% endfor %}

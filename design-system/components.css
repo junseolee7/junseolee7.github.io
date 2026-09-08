@@ -118,7 +118,9 @@ button,input,select,textarea {
 }
 
 .cv-dates,
-.cv-location {
+.cv-location,
+.tag,
+.project-entry .recognition {
   font-size: var(--text-small);
   font-weight: var(--weight-regular);
   line-height: var(--leading-small);
@@ -126,6 +128,72 @@ button,input,select,textarea {
 
 .cv-location {
   color: var(--color-accent-teal);
+}
+
+/* Shared profile list layout and metadata placement. */
+.cv-section {
+  display: grid;
+  grid-template-columns: 14rem minmax(0,1fr);
+  gap: var(--space-12);
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-12);
+}
+
+.cv-section:last-child {
+  padding-bottom: 0;
+}
+
+.cv-section h2 {
+  margin: 0;
+}
+
+.cv-entries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-entries > li {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 9rem;
+  column-gap: var(--space-8);
+}
+
+.cv-entries > li + li {
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.cv-dates {
+  grid-column: 2;
+  grid-row: 1;
+  color: var(--color-secondary);
+  text-align: right;
+  padding-top: var(--space-1);
+}
+
+.cv-body {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.cv-body > .cv-location {
+  margin-bottom: var(--space-2);
+}
+
+.cv-note {
+  margin-top: var(--space-2);
+}
+
+.cv-skills {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0,1fr);
+  gap: var(--space-4);
 }
 
 .mono,code,pre {
@@ -192,14 +260,11 @@ button,input,select,textarea {
   align-items: center;
   max-width: 100%;
   overflow-wrap: anywhere;
-  padding: .2rem .65rem;
-  background: var(--color-surface);
+  padding: 0 var(--space-2);
+  background: var(--color-canvas);
   color: var(--color-secondary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-small);
-  font-size: var(--text-small);
-  line-height: var(--leading-small);
-  font-weight: var(--weight-regular);
 }
 
 .tags {
@@ -305,6 +370,12 @@ mark.highlight {
 .project-entry p {
   margin-top: var(--space-3);
   max-width: var(--width-reading);
+}
+
+.project-entry .recognition {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  color: var(--color-accent-blue);
 }
 
 .project-entry .tags {
@@ -498,7 +569,37 @@ math {
   color: var(--color-secondary);
 }
 
+@media (max-width: 60rem) {
+  .cv-section {
+    grid-template-columns: 10rem minmax(0,1fr);
+    gap: var(--space-8);
+  }
+
+  .cv-entries > li {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  .cv-dates {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    padding: 0;
+    margin-bottom: var(--space-2);
+  }
+
+  .cv-body {
+    grid-row: 2;
+  }
+
+}
+
 @media(max-width:40rem) {
+  .cv-section {
+    grid-template-columns: minmax(0,1fr);
+    gap: var(--space-6);
+    padding-block: var(--space-8);
+  }
+
   .profile {
     grid-template-columns: minmax(0,1fr) 5rem;
     gap: var(--space-4);

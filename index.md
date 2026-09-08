@@ -19,8 +19,8 @@ layout: default
       <li>
         <span class="cv-dates">Expected 2029</span>
         <div class="cv-body">
+          <p class="cv-location">Stony Brook University</p>
           <p class="cv-role">B.S. in Applied Mathematics and Statistics</p>
-          <p class="cv-note cv-location">Stony Brook University</p>
         </div>
       </li>
     </ul>
@@ -32,8 +32,8 @@ layout: default
       <li>
         <span class="cv-dates">Aug 2026 – Present</span>
         <div class="cv-body">
+          <p class="cv-location">Stony Brook University</p>
           <p class="cv-role">Undergraduate Research Assistant</p>
-          <p class="cv-note cv-location">Stony Brook University</p>
           <p class="cv-note">Advisor: Prof. DoHwan Park</p>
         </div>
       </li>
@@ -53,8 +53,8 @@ layout: default
       <li>
         <span class="cv-dates">Summer 2026</span>
         <div class="cv-body">
+          <p class="cv-location">Bentley University, Boston, MA</p>
           <p class="cv-role">Mentor, Wolfram High School Summer Research Program</p>
-          <p class="cv-note cv-location">Bentley University, Boston, MA</p>
         </div>
       </li>
     </ul>
@@ -66,26 +66,27 @@ layout: default
       <li>
         <span class="cv-dates">Summer 2026</span>
         <div class="cv-body">
+          <p class="cv-location">Bentley University, Boston, MA</p>
           <p class="cv-role">Mentor, Wolfram High School Summer Research Program</p>
-          <p class="cv-note cv-location">Bentley University, Boston, MA</p>
         </div>
       </li>
       <li>
         <span class="cv-dates">Spring 2026</span>
         <div class="cv-body">
+          <p class="cv-location">Stony Brook University</p>
           <p class="cv-role">Teaching Assistant, AMS 310: Survey of Probability and Statistics</p>
-          <p class="cv-note cv-location">Stony Brook University</p>
         </div>
       </li>
       <li>
         <span class="cv-dates">Fall 2025</span>
         <div class="cv-body">
+          <p class="cv-location">Stony Brook University</p>
           <p class="cv-role">Teaching Assistant, AMS 210: Applied Linear Algebra</p>
-          <p class="cv-note cv-location">Stony Brook University</p>
         </div>
       </li>
       <li>
         <div class="cv-body">
+          <p class="cv-location">Stony Brook University</p>
           <p class="cv-role">Tutor, AMS 210: Applied Linear Algebra and AMS 161: Applied Calculus II</p>
         </div>
       </li>
@@ -111,28 +112,34 @@ layout: default
       <li>
         <span class="cv-dates">April 2026</span>
         <div class="cv-body">
+          <p class="cv-location">Korea Mathematica User Conference</p>
           <p class="cv-role">Wolfram Language and Computational Essay in STEM Education: A Student-Led Initiative at SUNY Korea</p>
-          <p class="cv-note">Korea Mathematica User Conference<br><span class="cv-location">Korea University, Seoul</span></p>
         </div>
       </li>
     </ul>
   </section>
 
   <section class="cv-section">
-    <h2>Recognition</h2>
+    <h2>Honors &amp; Awards</h2>
+    <ul class="cv-entries">
+      <li>
+        <span class="cv-dates">Spring 2025<br>Fall 2025<br>Spring 2026</span>
+        <div class="cv-body">
+          <p class="cv-location">Stony Brook University</p>
+          <p class="cv-role">Dean’s List</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Certificate &amp; Licenses</h2>
     <ul class="cv-entries">
       <li>
         <span class="cv-dates">January 2026</span>
         <div class="cv-body">
           <p class="cv-role"><a href="https://www.wolframcloud.com/obj/online-courses/certificates/level2-computational-research/a03904fc-0c67-4c90-9854-ec20e89e349a/2.html">Applied Expertise in Computational Research (Level 2)</a></p>
           <p class="cv-note">Wolfram U certification</p>
-        </div>
-      </li>
-      <li>
-        <span class="cv-dates">2025 – 2026</span>
-        <div class="cv-body">
-          <p class="cv-role">Dean’s List</p>
-          <p class="cv-note"><span class="cv-location">Stony Brook University</span><br>Spring 2025, Fall 2025, Spring 2026</p>
         </div>
       </li>
     </ul>

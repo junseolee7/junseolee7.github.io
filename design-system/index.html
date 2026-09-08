@@ -99,7 +99,7 @@
           <div class="type-reference">
             <h3 class="subheading">Website typography</h3>
             <p class="reading">General copy uses 1.60 line height; sustained reading uses 1.70. Inline code inherits its paragraph’s line spacing.</p>
-            <p class="reading">Profile entries pair an 18 px semibold title in charcoal with a 16 px regular description in secondary gray, separated by 8 px. Dates and location labels share 14 px regular type with 1.50 line height. Location labels use teal; dates use secondary gray and place names within titles remain charcoal. Section headings stay at 32 px. A 1 px light-gray rule separates consecutive entries within the entry column, with 16 px of space on each side.</p>
+            <p class="reading">Profile entries pair an 18 px semibold title in charcoal with a 16 px regular description in secondary gray, separated by 8 px. Dates and location labels share 14 px regular type with 1.50 line height. Place each location or venue label above its item title with an 8 px gap. Location labels use teal; dates use secondary gray and place names within titles remain charcoal. Section headings stay at 32 px. A 1 px light-gray rule separates consecutive entries within the entry column, with 16 px of space on each side.</p>
             <p class="reading">About, Projects, and Writings list descriptions share the same 16 px regular type, 1.60 line height, and secondary gray. Archive entries, related-writing cards, and the examples below use that same shared rule.</p>
             <div class="table-wrap" role="region" aria-label="Website typography">
               <table>
@@ -730,9 +730,27 @@
           </div>
           <div class="subsection">
           <h3 class="subheading">Project entries</h3>
-          <a class="project-entry" href="https://community.wolfram.com/groups/-/m/t/3603794"><div><span class="eyebrow">Computational essay</span><h3>Loss Landscape Across the Double Descent Curve</h3><p>This essay analyzes the relationship between model capacity and the flatness of minimizers across the double descent curve.</p><div class="tags"><span class="tag">Wolfram Community Editorial Board Staff Picks</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="project-entry" href="https://wolframclub.notion.site/homepage"><div><span class="eyebrow">Educational workshop</span><h3>Computational Essay Workshops for STEM Undergraduates</h3><p>A faculty-advised research program with the aim of cultivating computational thinking and strengthening technical communication skills through writing computational essays in the Wolfram Language.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
-          <p class="sample-note">Entries share the same structure and prominence. A project’s research, implementation, and teaching contributions can be explained within it.</p>
+          <a class="project-entry" href="https://community.wolfram.com/groups/-/m/t/3603794"><div><p class="recognition">Wolfram Community Editorial Board Staff Picks</p><h3>Loss Landscape Across the Double Descent Curve</h3><p>This essay analyzes the relationship between model capacity and the flatness of minimizers across the double descent curve.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="project-entry" href="https://wolframclub.notion.site/homepage"><div><h3>Computational Essay Workshops for STEM Undergraduates</h3><p>A faculty-advised research program with the aim of cultivating computational thinking and strengthening technical communication skills through writing computational essays in the Wolfram Language.</p><div class="tags"><span class="tag">Education</span><span class="tag">Workshop</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <p class="sample-note">Recognition links appear above the title with an 8 px gap. Tags stay below the description. Dates, location labels, recognition labels, and tags share 14 px regular type and 1.50 line height. Tags use compact white styling with secondary-gray text, a 1 px light-gray border, 4 px corner radius, and 0 px vertical / 8 px horizontal padding. Tags are separated by 8 px, and their group sits 16 px below the description.</p>
+        </div>
+        <div class="subsection">
+          <h3 class="subheading">Profile lists</h3>
+          <p class="sample-note">Use the shared profile list component. Location and venue labels sit above item titles, with an 8 px gap. Keep Honors &amp; Awards separate from Certificate &amp; Licenses, and put each repeated honor’s term on its own line in the date field.</p>
+          <section class="cv-section">
+            <h2>Honors &amp; Awards</h2>
+            <ul class="cv-entries"><li>
+              <span class="cv-dates">Spring 2025<br>Fall 2025<br>Spring 2026</span>
+              <div class="cv-body"><p class="cv-location">Stony Brook University</p><p class="cv-role">Dean’s List</p></div>
+            </li></ul>
+          </section>
+          <section class="cv-section">
+            <h2>Certificate &amp; Licenses</h2>
+            <ul class="cv-entries"><li>
+              <span class="cv-dates">January 2026</span>
+              <div class="cv-body"><p class="cv-role"><a href="https://www.wolframcloud.com/obj/online-courses/certificates/level2-computational-research/a03904fc-0c67-4c90-9854-ec20e89e349a/2.html">Applied Expertise in Computational Research (Level 2)</a></p><p class="cv-note">Wolfram U certification</p></div>
+            </li></ul>
+          </section>
         </div>
           <div class="subsection">
           <h3 class="subheading">Writing entry</h3>

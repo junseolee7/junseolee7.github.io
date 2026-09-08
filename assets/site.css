@@ -136,67 +136,6 @@ body, main, section, article, .wrapper {
   border-radius: var(--radius-medium);
 }
 
-.cv-section {
-  display: grid;
-  grid-template-columns: 14rem minmax(0,1fr);
-  gap: var(--space-12);
-  border-top: 1px solid var(--color-border);
-  padding-block: var(--space-12);
-}
-
-.cv-section:last-child {
-  padding-bottom: 0;
-}
-
-.cv-section h2 {
-  margin: 0;
-}
-
-.cv-entries {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cv-entries > li {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) 9rem;
-  column-gap: var(--space-8);
-}
-
-.cv-entries > li + li {
-  margin-top: var(--space-4);
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-4);
-}
-
-.cv-dates {
-  grid-column: 2;
-  grid-row: 1;
-  color: var(--color-secondary);
-  text-align: right;
-  padding-top: var(--space-1);
-}
-
-.cv-body {
-  grid-column: 1;
-  grid-row: 1;
-  min-width: 0;
-}
-
-.cv-note {
-  margin-top: var(--space-2);
-}
-
-.cv-skills {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: minmax(0,1fr);
-  gap: var(--space-4);
-}
-
 /* Collection pages. */
 .page-header {
   margin-bottom: var(--space-16);
@@ -222,12 +161,6 @@ body, main, section, article, .wrapper {
 
 .entry-list {
   min-width: 0;
-}
-
-.project-entry .recognition {
-  color: var(--color-accent-blue);
-  font-size: var(--text-small);
-  line-height: var(--leading-small);
 }
 
 .project-entry .arrow {
@@ -487,11 +420,6 @@ mjx-container[display=true] {
     width: 9rem;
   }
 
-  .cv-section {
-    grid-template-columns: 10rem minmax(0,1fr);
-    gap: var(--space-8);
-  }
-
   .index-section {
     grid-template-columns: minmax(0,1fr);
     gap: var(--space-6);
@@ -499,22 +427,6 @@ mjx-container[display=true] {
 
   .index-section > h2 {
     padding-top: 0;
-  }
-
-  .cv-entries > li {
-    grid-template-columns: minmax(0,1fr);
-  }
-
-  .cv-dates {
-    grid-column: 1;
-    grid-row: 1;
-    text-align: left;
-    padding: 0;
-    margin-bottom: var(--space-2);
-  }
-
-  .cv-body {
-    grid-row: 2;
   }
 
 }
@@ -549,15 +461,6 @@ mjx-container[display=true] {
 
   .intro-copy {
     width: 100%;
-  }
-
-  .cv-section {
-    grid-template-columns: minmax(0,1fr);
-    gap: var(--space-6);
-  }
-
-  .cv-section {
-    padding-block: var(--space-8);
   }
 
   .page-header {
