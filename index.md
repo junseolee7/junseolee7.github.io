@@ -112,7 +112,7 @@ layout: default
         <span class="cv-dates">April 2026</span>
         <div class="cv-body">
           <p class="cv-role">Wolfram Language and Computational Essay in STEM Education: A Student-Led Initiative at SUNY Korea</p>
-          <p class="cv-note">Wolfram Technology Conference<br><span class="cv-location">Korea University, Seoul</span></p>
+          <p class="cv-note">Korea Mathematica User Conference<br><span class="cv-location">Korea University, Seoul</span></p>
         </div>
       </li>
     </ul>

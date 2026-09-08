@@ -224,10 +224,6 @@ body, main, section, article, .wrapper {
   min-width: 0;
 }
 
-.project-entry p {
-  color: var(--color-ink);
-}
-
 .project-entry .recognition {
   color: var(--color-accent-blue);
   font-size: var(--text-small);

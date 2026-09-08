@@ -107,7 +107,10 @@ button,input,select,textarea {
   line-height: var(--leading-body);
 }
 
-.cv-note {
+/* List descriptions share one treatment across About, Projects, and Writings. */
+.cv-note,
+.project-entry p,
+.writing-entry p {
   color: var(--color-secondary);
   font-size: var(--text-interface);
   font-weight: var(--weight-regular);
@@ -302,9 +305,6 @@ mark.highlight {
 .project-entry p {
   margin-top: var(--space-3);
   max-width: var(--width-reading);
-  color: var(--color-secondary);
-  font-size: var(--text-body);
-  line-height: var(--leading-body);
 }
 
 .project-entry .tags {

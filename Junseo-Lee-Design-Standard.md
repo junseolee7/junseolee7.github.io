@@ -53,7 +53,7 @@ All non-code roles use Source Sans 3. Code uses JetBrains Mono.
 | Subheading | 24 px | 600 | 1.30 |
 | Lead paragraph | 22 px | 400 | 1.50 |
 | Profile item title | 18 px | 600 | 1.60 |
-| Profile item description | 16 px | 400 | 1.60 |
+| About, Projects, and Writings item description | 16 px | 400 | 1.60 |
 | Profile date and location label | 14 px | 400 | 1.50 |
 | General website copy | 18 px | 400 | 1.60 |
 | Sustained reading | 18 px | 400 | 1.70 |
@@ -68,10 +68,12 @@ All non-code roles use Source Sans 3. Code uses JetBrains Mono.
 
 Apply the body-text rule to the individual text block:
 
-- General website copy includes introductions, summaries, and short descriptions.
+- General website copy includes introductions and standalone summaries. Descriptions in About, Projects, and Writings lists use the shared item-description treatment below.
 - Sustained reading includes articles, essays, and long explanatory passages.
 
 Profile entries use a 32 px section heading, an 18 px semibold item title in charcoal, and a 16 px regular description in secondary gray. Keep an 8 px gap between the item title and description. This applies across education, experience, leadership, invited talks, and recognition. Dates and location labels share the 14 px regular metadata treatment with 1.50 line height. Location labels use the palette's teal; dates use secondary gray and place names within titles remain charcoal.
+
+Descriptions in About, Projects, and Writings lists share one typography rule: 16 px, weight 400, 1.60 line height, and secondary gray (`#595959`). The same rule applies to archive entries, related-writing cards, and the design-reference examples. Site layouts must not override this description typography; dates, locations, and recognition labels retain their metadata treatments.
 
 Separate consecutive profile entries with a 1 px light-gray rule (`#DEDEDE`) spanning the entry column, with 16 px of space on each side. Add rules only between entries; the section retains its own full-width divider.
 
@@ -95,7 +97,7 @@ Sizes scale continuously within these intervals and stay at their respective min
 
 The pixel equivalents and viewport boundaries change when the browser’s default font size changes.
 
-Use 14 px for metadata, location labels, captions, tags, and design-system reference annotations. Profile item descriptions use 16 px as specified above.
+Use 14 px for metadata, location labels, captions, tags, and design-system reference annotations. About, Projects, and Writings item descriptions use 16 px as specified above.
 
 Inline code preserves the surrounding paragraph’s line spacing. Code blocks use their own line spacing and preserve meaningful indentation.
 
