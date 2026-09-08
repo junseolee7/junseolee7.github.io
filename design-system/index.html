@@ -99,7 +99,7 @@
           <div class="type-reference">
             <h3 class="subheading">Website typography</h3>
             <p class="reading">General copy uses 1.60 line height; sustained reading uses 1.70. Inline code inherits its paragraph’s line spacing.</p>
-            <p class="reading">Profile entries pair an 18 px semibold title in charcoal with a 16 px regular description in secondary gray, separated by 8 px. Dates and location labels share 14 px regular type with 1.50 line height. Place each location or venue label above its item title with an 8 px gap. Location labels use teal; dates use secondary gray and place names within titles remain charcoal. Section headings stay at 32 px. A 1 px light-gray rule separates consecutive entries within the entry column, with 16 px of space on each side.</p>
+            <p class="reading">Profile entries pair an 18 px semibold title in charcoal with a 16 px regular description in secondary gray. Dates and location labels share 14 px regular type with 1.50 line height. Place each location or venue label directly below its item title, followed by any description, with 8 px between consecutive blocks. Location labels use teal; dates use secondary gray and place names within titles remain charcoal. Section headings stay at 32 px. A 1 px light-gray rule separates consecutive entries within the entry column, with 16 px of space on each side.</p>
             <p class="reading">About, Projects, and Writings list descriptions share the same 16 px regular type, 1.60 line height, and secondary gray. Archive entries, related-writing cards, and the examples below use that same shared rule.</p>
             <div class="table-wrap" role="region" aria-label="Website typography">
               <table>
@@ -736,12 +736,12 @@
         </div>
         <div class="subsection">
           <h3 class="subheading">Profile lists</h3>
-          <p class="sample-note">Use the shared profile list component. Location and venue labels sit above item titles, with an 8 px gap. Keep Honors &amp; Awards separate from Certificate &amp; Licenses, and put each repeated honor’s term on its own line in the date field.</p>
+          <p class="sample-note">Use the shared profile list component. Location and venue labels sit directly below item titles and above descriptions, with 8 px between consecutive blocks. Keep Honors &amp; Awards separate from Certificate &amp; Licenses. Repeated honors’ terms appear on separate lines in the desktop date column and inline, separated by commas, when dates move above entries at 60 rem or less. Allow natural wrapping when needed; do not repeat terms in the description.</p>
           <section class="cv-section">
             <h2>Honors &amp; Awards</h2>
             <ul class="cv-entries"><li>
-              <span class="cv-dates">Spring 2025<br>Fall 2025<br>Spring 2026</span>
-              <div class="cv-body"><p class="cv-location">Stony Brook University</p><p class="cv-role">Dean’s List</p></div>
+              <span class="cv-dates cv-date-list"><span class="cv-date-item">Spring 2025</span><span class="cv-date-separator">, </span><span class="cv-date-item">Fall 2025</span><span class="cv-date-separator">, </span><span class="cv-date-item">Spring 2026</span></span>
+              <div class="cv-body"><p class="cv-role">Dean’s List</p><p class="cv-location">Stony Brook University</p></div>
             </li></ul>
           </section>
           <section class="cv-section">

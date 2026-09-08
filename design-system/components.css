@@ -173,6 +173,14 @@ button,input,select,textarea {
   padding-top: var(--space-1);
 }
 
+.cv-date-item {
+  display: block;
+}
+
+.cv-date-separator {
+  display: none;
+}
+
 .cv-body {
   grid-column: 1;
   grid-row: 1;
@@ -180,7 +188,7 @@ button,input,select,textarea {
 }
 
 .cv-body > .cv-location {
-  margin-bottom: var(--space-2);
+  margin-top: var(--space-2);
 }
 
 .cv-note {
@@ -585,6 +593,11 @@ math {
     text-align: left;
     padding: 0;
     margin-bottom: var(--space-2);
+  }
+
+  .cv-date-item,
+  .cv-date-separator {
+    display: inline;
   }
 
   .cv-body {
