@@ -446,7 +446,7 @@ tbody tr:last-child td { border-bottom: 0; }
 <div class="metric"><h2>다음 1시간 초과 가능성</h2><p id="exceed" class="value"></p><p id="exceedCaption" class="caption"></p></div>
 <div class="metric"><h2>계약전력 대비 여유</h2><p id="headroom" class="value"></p><p id="headroomCaption" class="caption"></p></div>
 </section>
-<section id="attention" class="attention" aria-label="우선 확인할 시간"><div><h2 id="attentionTitle">우선 확인할 시간</h2><p id="attentionTime" class="attention-value"></p></div><div><p id="attentionProbability" class="attention-value"></p><p id="attentionCaption" class="caption"></p></div></section>
+<section id="attention" class="attention" aria-label="선택기간의 계약전력 초과 가능성"><div><h2 id="attentionTitle">앞으로 1시간</h2><p id="attentionTime" class="attention-value"></p></div><div><p id="attentionProbability" class="attention-value"></p><p id="attentionCaption" class="caption"></p></div></section>
 <section class="section" id="forecast" aria-labelledby="forecast-title">
 <div class="section-heading"><h2 id="forecast-title">전력수요 전망</h2><p id="forecastPeriod" class="caption"></p></div>
 <div class="legend"><span><i class="swatch" aria-hidden="true"></i>실제 사용</span><span><i class="swatch swatch--forecast" aria-hidden="true"></i>예상 사용</span><span><i class="swatch swatch--interval" aria-hidden="true"></i>예상 범위(95%)</span><span id="contractLegend"><i class="swatch swatch--contract" aria-hidden="true"></i>계약전력</span></div>
@@ -614,7 +614,8 @@ function renderPlan(threshold) {
   $('planReview').hidden=!reviewing;$('planIntro').hidden=reviewing;
   $('closeReview').textContent=frame.ended?'비교 종료':'비교 종료·계속';
   if(!dailyFrame) { $('planStamp').textContent='비교할 계획이 아직 없습니다.';return; }
-  $('planStamp').textContent=`${date(dailyFrame.origin)} 작성 · ${date(dailyFrame.profiles[0].time).slice(0,10)} 생산계획`;
+  const targetDay=date(dailyFrame.profiles[0].time).slice(5,10);
+  $('planStamp').textContent=reviewing?`${targetDay} 생산계획 · ${shortDate(dailyFrame.origin)} 작성`:`${targetDay} 생산계획`;
   if(!reviewing) return;
   const pending=!dailyFrame.scenarios?.length;
   $('planLoading').hidden=!pending;
@@ -664,7 +665,7 @@ function render() {
   $('headroom').innerHTML=margin!==null?powerMarkup(margin):'—';
   $('headroomCaption').textContent=margin===null?(invalid?'계약전력을 입력하세요.':'앞으로의 예측이 없습니다.'):
     `앞으로 ${rows.length}시간의 최대 예상 사용이 계약전력보다 ${number(Math.abs(margin))} kW ${margin<0?'높음':margin>0?'낮음':'차이 없음'}`;
-  $('attentionTitle').textContent=rows.length?`앞으로 ${rows.length}시간 · 우선 확인할 시간`:'시뮬레이션 종료';
+  $('attentionTitle').textContent=rows.length?`앞으로 ${rows.length}시간`:'시뮬레이션 종료';
   $('attentionTime').textContent=focus?shortDate(focus.row.time):rows.length?'계약전력을 입력하세요.':'모든 사용량이 도착했습니다.';
   $('attentionProbability').textContent=focus?'초과 가능성 '+probability(focus.row,threshold):'';
   $('attentionCaption').textContent=focus?'선택기간 중 가장 높은 시간별 초과 가능성':'';
