@@ -340,6 +340,13 @@ main.page-shell { padding-bottom: 3rem; }
 .metric h2 { font-size: .875rem; color: var(--color-secondary); font-weight: 400; letter-spacing: 0; }
 .value { font-size: 2rem; font-weight: 600; line-height: 1.3; margin-block: .75rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .value .unit { font-size: 1rem; font-weight: 400; }
+#last,#mean { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .4rem; }
+.forecast-spread { font-size: 1.125rem; font-weight: 500; white-space: nowrap; }
+.realized-error { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .25rem; font-size: .9375rem; font-weight: 500; }
+.realized-error.is-under { color: var(--color-accent-amber); }
+.realized-error.is-over { color: var(--color-accent-blue); }
+.realized-error.is-zero { color: var(--color-secondary); }
+.error-unit,.error-direction { font-size: .75rem; font-weight: 400; }
 .attention { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2rem; padding: 1.5rem; margin-top: 1.5rem; background: var(--color-accent-blue-soft); border-radius: .5rem; }
 .attention h2 { font-size: .875rem; color: var(--color-secondary); font-weight: 400; letter-spacing: 0; }
 .attention-value { font-size: 1.5rem; font-weight: 600; margin-top: .35rem; font-variant-numeric: tabular-nums; }
@@ -355,6 +362,20 @@ main.page-shell { padding-bottom: 3rem; }
 .swatch--contract { border-color: var(--color-accent-teal); border-top-style: dashed; }
 .swatch--baseline { border-color: var(--color-secondary); border-top-style: dashed; }
 .chart { display: block; width: 100%; height: auto; font-family: var(--font-sans); font-variant-numeric: tabular-nums; }
+.contribution-time { width: min(100%,18rem); }
+.contribution-legend { display: flex; gap: 1.5rem; margin-block: 1.5rem 1rem; }
+.term-positive { color: var(--color-accent-blue); }
+.term-negative { color: var(--color-accent-teal); }
+.contribution-bars { display: grid; gap: .65rem; }
+.contribution-row { display: grid; grid-template-columns: 12rem minmax(0,1fr) 5.5rem; gap: 1rem; align-items: center; font-size: .9375rem; min-width: 0; }
+.contribution-label { word-break: keep-all; }
+.contribution-value { text-align: right; font-variant-numeric: tabular-nums; }
+.contribution-track { position: relative; display: block; height: 1.1rem; background: var(--color-surface); border-radius: .2rem; }
+.contribution-track::before { content: ''; position: absolute; left: 50%; top: -.2rem; bottom: -.2rem; width: 1px; background: var(--color-control-border); }
+.contribution-bar { position: absolute; top: .1rem; height: .9rem; border-radius: .15rem; transition: width 700ms cubic-bezier(.22,1,.36,1),left 700ms cubic-bezier(.22,1,.36,1),background-color 200ms; }
+.contribution-bar.is-positive { background: var(--color-accent-blue); }
+.contribution-bar.is-negative { background: var(--color-accent-teal); }
+.contribution-total { margin-block: 1.5rem .5rem; font-size: 1.125rem; font-weight: 600; font-variant-numeric: tabular-nums; }
 figcaption { margin-top: .75rem; }
 .review-banner { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; padding: 1.25rem; background: var(--color-surface); border-radius: .5rem; font-size: 1rem; }
 .plan-note { margin-block: 1.5rem .75rem; }
@@ -389,6 +410,10 @@ tbody tr:last-child td { border-bottom: 0; }
  .hero { align-items: start; flex-direction: column; }
 }
 @media (max-width: 40rem) {
+ .contribution-row { grid-template-columns: minmax(0,1fr) 5.5rem; gap: .35rem 1rem; }
+ .contribution-track { grid-column: 1 / -1; grid-row: 2; }
+ .contribution-value { grid-column: 2; grid-row: 1; }
+ .contribution-bars { gap: 1rem; }
  .hero { padding-block: 2rem 1.5rem; }
  .sitebar { gap: .5rem 1rem; }
  .site-nav { gap: 1rem; }
@@ -418,7 +443,7 @@ tbody tr:last-child td { border-bottom: 0; }
  #log { font-size: .875rem; }
  #log th,#log td { padding: .75rem .35rem; }
 }
-@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } .contribution-bar { transition: none; } }
 </style></head><body>
 <a class="skip-link" href="#main">본문으로 이동</a>
 <header class="site-header"><div class="page-shell sitebar"><span class="wordmark">KAMP</span>
@@ -443,14 +468,20 @@ tbody tr:last-child td { border-bottom: 0; }
 <section class="metrics" aria-label="전력 사용 요약">
 <div class="metric"><h2>최근 전력 사용</h2><p id="last" class="value"></p><p id="lastTime" class="caption"></p></div>
 <div class="metric"><h2>다음 1시간 예상 사용</h2><p id="mean" class="value"></p><p id="interval" class="caption"></p></div>
-<div class="metric"><h2>다음 1시간 초과 가능성</h2><p id="exceed" class="value"></p><p id="exceedCaption" class="caption"></p></div>
+<div class="metric"><h2>다음 1시간<br>시간평균 전력의 계약전력 초과 확률</h2><p id="exceed" class="value"></p><p id="exceedCaption" class="caption"></p></div>
 <div class="metric"><h2>계약전력 대비 여유</h2><p id="headroom" class="value"></p><p id="headroomCaption" class="caption"></p></div>
 </section>
-<section id="attention" class="attention" aria-label="선택기간의 계약전력 초과 가능성"><div><h2 id="attentionTitle">앞으로 1시간</h2><p id="attentionTime" class="attention-value"></p></div><div><p id="attentionProbability" class="attention-value"></p><p id="attentionCaption" class="caption"></p></div></section>
+<section id="attention" class="attention" aria-label="선택기간의 시간평균 전력의 계약전력 초과 확률"><div><h2 id="attentionTitle">앞으로 1시간</h2><p id="attentionTime" class="attention-value"></p></div><div><p id="attentionProbability" class="attention-value"></p><p id="attentionCaption" class="caption"></p></div></section>
 <section class="section" id="forecast" aria-labelledby="forecast-title">
 <div class="section-heading"><h2 id="forecast-title">전력수요 전망</h2><p id="forecastPeriod" class="caption"></p></div>
 <div class="legend"><span><i class="swatch" aria-hidden="true"></i>실제 사용</span><span><i class="swatch swatch--forecast" aria-hidden="true"></i>예상 사용</span><span><i class="swatch swatch--interval" aria-hidden="true"></i>예상 범위(95%)</span><span id="contractLegend"><i class="swatch swatch--contract" aria-hidden="true"></i>계약전력</span></div>
-<figure><svg id="chart" class="chart" viewBox="0 0 1120 330" role="img" aria-label="실제 전력 사용과 앞으로의 예상 사용"></svg><figcaption class="caption">시간평균 전력입니다. 예상 범위는 앞으로의 사용량이 달라질 수 있는 폭을 보여줍니다.</figcaption></figure>
+<figure><svg id="chart" class="chart" viewBox="0 0 1120 330" role="img" aria-label="실제 전력 사용과 앞으로의 예상 사용"></svg><figcaption class="caption">시간평균 전력입니다. 예상 범위는 앞으로의 사용량이 달라질 수 있는 폭을 보여줍니다. 표시된 초과 확률은 15분 최대수요전력의 초과 확률이 아닙니다.</figcaption></figure>
+</section>
+<section class="section" id="contributions" aria-labelledby="contribution-title">
+<div class="section-heading"><div><h2 id="contribution-title">예측 기여도</h2><p id="contributionSource" class="section-caption"></p></div><div class="field contribution-time"><label for="contributionTime">살펴볼 예측 시각</label><select id="contributionTime"></select></div></div>
+<p class="caption">예상 사용량을 구성하는 항입니다. 양수는 더하고, 음수는 뺍니다.</p>
+<p id="contributionEmpty" class="empty-state" hidden>항별 기여도를 기다리고 있습니다.</p>
+<figure id="contributionFigure"><div class="contribution-legend caption"><span class="term-positive">+ 더함</span><span class="term-negative">− 뺌</span><span>단위 kW</span></div><div id="contributionBars" class="contribution-bars" role="list" aria-label="예상 사용량의 항별 기여도"></div><figcaption><p id="contributionTotal" class="contribution-total"></p><p class="caption">합계는 반올림 전 값으로 계산합니다. 각 항의 기여는 실제 원인이나 생산량 변경 효과를 뜻하지 않습니다.</p></figcaption></figure>
 </section>
 <section class="section" id="planning" aria-labelledby="planning-title">
 <div class="section-heading"><div><h2 id="planning-title">생산계획 비교</h2><p id="planStamp" class="section-caption"></p></div><button id="reviewPlan" type="button" aria-controls="planReview" aria-expanded="false">계획 비교</button></div>
@@ -479,6 +510,9 @@ let dailyFrame = frame.scenarios?.length ? frame : null;
 let started = false, playing = false, reviewing = false, selectedRate = 0;
 let timer = null, loading = false, requestVersion = 0, controller = null, connectionFailed = false;
 let sessionToken = null, dailyToken = null, lastRequestStarted = null;
+let contributionStep=1,contributionOptions='';
+const contributionNodes=new Map();
+const termLabels={intercept:'기본값',y_lag_1:'1시간 전 사용',y_lag_2:'2시간 전 사용',y_lag_3:'3시간 전 사용',y_lag_24:'하루 전 사용',y_lag_168:'일주일 전 사용',temperature_lag1:'직전 기온',wind_speed_lag1:'직전 풍속',humidity_lag1:'직전 습도',rainfall_lag1:'직전 강수량',production_plan:'생산계획',production_zero:'생산 중단 여부',is_holiday:'공휴일',hour:'시간대',weekday:'요일',hour_weekday:'시간대·요일 조합',flow_correction:'최근 수요 흐름 보정',observed_state:'최근 관측 반영',prediction_correction:'추가 예측 보정'};
 const decoded = new WeakMap();
 function date(t) { return new Date(t).toISOString().slice(0,16).replace('T',' '); }
 function shortDate(t) { return date(t).slice(5); }
@@ -549,6 +583,17 @@ function probability(row,threshold){
 }
 
 function powerMarkup(value) { return number(value)+' <span class="unit">kW</span>'; }
+function forecastMarkup(row) {
+  const variance=row.detail?.variance,sd=Number.isFinite(variance)&&variance>=0?Math.sqrt(variance):null;
+  return `<span>${number(row.mean)}</span>${sd===null?'':` <span class="forecast-spread" title="예측오차 표준편차 (1σ)" aria-label="예측오차 표준편차 ${number(sd)} 킬로와트">± ${number(sd)}</span>`} <span class="unit">kW</span>`;
+}
+function observedMarkup(observation) {
+  const issued=forecastHistory.find(row=>row.time===observation.time);
+  if(!Number.isFinite(issued?.mean)) return powerMarkup(observation.value);
+  const error=observation.value-issued.mean,direction=error>0?'under':error<0?'over':'zero';
+  const label=error>0?'과소예측':error<0?'과대예측':'차이 없음',sign=error>0?'+':error<0?'−':'';
+  return `<span>${powerMarkup(observation.value)}</span> <span class="realized-error is-${direction}" title="실제 사용 − 발행 당시 예상 사용" aria-label="${label}, 실제 사용에서 발행 당시 예상 사용을 뺀 오차 ${sign}${number(Math.abs(error))} 킬로와트">${sign}${number(Math.abs(error))} <span class="error-unit">kW</span><span class="error-direction">${label}</span></span>`;
+}
 function pathLine(points,x,y) { return points.map((p,i)=>(i?'L':'M')+x(p.time).toFixed(2)+','+y(p.value).toFixed(2)).join(' '); }
 function chartLayout(id, minTime, maxTime, values, height=300) {
   const svg=$(id), width=Math.max(280,Math.min(1120,Math.round(svg.getBoundingClientRect().width)||1120));
@@ -583,7 +628,7 @@ function drawForecast(rows,focus,threshold) {
   svg+=`<path d="${pathLine(observations,x,y)}" fill="none" stroke="var(--color-ink)" stroke-width="2"/>`;
   svg+=`<line x1="${x(frame.origin)}" x2="${x(frame.origin)}" y1="${c.top}" y2="${c.bottom}" stroke="var(--color-secondary)" stroke-dasharray="3 4"/><text x="${Math.min(c.right-22,x(frame.origin))}" y="20" text-anchor="middle" fill="var(--color-secondary)" font-size="12">현재</text>`;
   svg+=contractLine(c,threshold);
-  if(focus) svg+=`<circle cx="${x(focus.row.time)}" cy="${y(focus.row.mean)}" r="5" fill="white" stroke="var(--color-accent-blue)" stroke-width="2"><title>우선 확인 ${date(focus.row.time)} · 초과 가능성 ${probability(focus.row,threshold)}</title></circle>`;
+  if(focus) svg+=`<circle cx="${x(focus.row.time)}" cy="${y(focus.row.mean)}" r="5" fill="white" stroke="var(--color-accent-blue)" stroke-width="2"><title>${date(focus.row.time)} · 시간평균 전력의 계약전력 초과 확률 ${probability(focus.row,threshold)}</title></circle>`;
   $('chart').innerHTML=svg;$('contractLegend').hidden=threshold===null;
 }
 function drawPlanChart(id,base,alternative,threshold,unit) {
@@ -647,6 +692,40 @@ function renderHistory() {
   $('log').innerHTML='<thead><tr><th scope="col">시간</th><th scope="col">예상 사용 (kW)</th><th scope="col">실제 사용 (kW)</th></tr></thead><tbody>'+(
     rows.map(r=>{const issued=forecastHistory.find(f=>f.time===r.time);return `<tr><td>${shortDate(r.time)}</td><td>${number(issued?.mean)}</td><td>${number(r.value)}</td></tr>`;}).join('')||'<tr><td colspan="3" class="empty-state">첫 번째 사용량을 기다리고 있습니다.</td></tr>')+'</tbody>';
 }
+function renderContributions(rows) {
+  const comparison=reviewing&&dailyFrame?.scenarioProfiles?.[String(selectedRate)];
+  const source=comparison?.length?comparison:rows;
+  $('contributionSource').textContent=comparison?.length?`${rateLabel(selectedRate)} · ${shortDate(dailyFrame.origin)} 기준`:`현재 전망 · ${shortDate(frame.origin)} 기준`;
+  const available=source.filter(row=>row.meanTerms?.length&&row.meanTerms.every(t=>termLabels[t.key]&&Number.isFinite(t.value)));
+  const empty=!available.length;
+  $('contributionFigure').hidden=empty;$('contributionEmpty').hidden=!empty;$('contributionTime').disabled=empty;
+  if(empty) { $('contributionEmpty').textContent=frame.ended&&!reviewing?'앞으로의 예측이 없습니다.':'항별 기여도 자료가 없습니다.';return; }
+  if(!available.some(row=>row.step===contributionStep)) contributionStep=available[0].step;
+  const options=available.map(row=>`<option value="${row.step}">${shortDate(row.time)}${comparison?.length&&row.time<=frame.origin?' · 지난 시간':` · ${row.step}시간 후`}</option>`).join('');
+  if(options!==contributionOptions) { $('contributionTime').innerHTML=options;contributionOptions=options; }
+  $('contributionTime').value=String(contributionStep);
+  const row=available.find(row=>row.step===contributionStep),maximum=Math.max(1,...row.meanTerms.map(t=>Math.abs(t.value)));
+  for(const term of row.meanTerms) {
+    let nodes=contributionNodes.get(term.key);
+    if(!nodes) {
+      const element=document.createElement('div'),label=document.createElement('span'),track=document.createElement('span'),bar=document.createElement('span'),value=document.createElement('span');
+      element.className='contribution-row';element.setAttribute('role','listitem');element.setAttribute('data-term',term.key);
+      label.className='contribution-label';label.textContent=termLabels[term.key];track.className='contribution-track';track.setAttribute('aria-hidden','true');bar.className='contribution-bar';bar.style.width='0%';bar.style.left='50%';track.appendChild(bar);
+      value.className='contribution-value';element.appendChild(label);element.appendChild(track);element.appendChild(value);$('contributionBars').appendChild(element);
+      nodes={element,bar,value};contributionNodes.set(term.key,nodes);
+      if(window.requestAnimationFrame) window.requestAnimationFrame(()=>applyContribution(nodes.bar));
+    }
+    const width=Math.abs(term.value)/maximum*50;
+    nodes.bar.className='contribution-bar '+(term.value<0?'is-negative':'is-positive');
+    nodes.bar.setAttribute('data-width',String(width));nodes.bar.setAttribute('data-left',String(term.value<0?50-width:50));
+    if(nodes.bar.style.width!=='0%'||!window.requestAnimationFrame) applyContribution(nodes.bar);
+    else window.requestAnimationFrame(()=>applyContribution(nodes.bar));
+    nodes.value.textContent=(term.value>0?'+':term.value<0?'−':'')+number(Math.abs(term.value),2);
+    nodes.element.setAttribute('aria-label',`${termLabels[term.key]} ${term.value<0?'빼기':'더하기'} ${number(Math.abs(term.value),2)} kW`);
+  }
+  $('contributionTotal').textContent=`합계 = 예상 사용 ${number(row.mean)} kW`;
+}
+function applyContribution(bar) {bar.style.width=bar.getAttribute('data-width')+'%';bar.style.left=bar.getAttribute('data-left')+'%';}
 function render() {
   if(!started) return;
   const rows=forecastRows(),threshold=contract(),focus=priority(rows,threshold),first=rows[0],last=observations.at(-1);
@@ -656,8 +735,8 @@ function render() {
   $('horizon').disabled=!!frame.ended;
   $('connectionMessage').hidden=!connectionFailed;
   const invalid=threshold===null;$('contractError').hidden=!invalid;$('contractPower').setAttribute('aria-invalid',String(invalid));
-  $('last').innerHTML=powerMarkup(last.value);$('lastTime').textContent=shortDate(last.time)+' 실제 사용';
-  $('mean').innerHTML=first?powerMarkup(first.mean):'—';
+  $('last').innerHTML=observedMarkup(last);$('lastTime').textContent=shortDate(last.time)+' 실제 사용';
+  $('mean').innerHTML=first?forecastMarkup(first):'—';
   $('interval').textContent=first?`예상 범위(95%) ${number(first.lower95)}–${number(first.upper95)} kW`:'모든 시간의 사용량을 확인했습니다.';
   $('exceed').textContent=first&&threshold!==null?probability(first,threshold):'—';
   $('exceedCaption').textContent=threshold===null?'계약전력을 입력하세요.':first?shortDate(first.time)+' · 계약전력 '+number(threshold)+' kW':'앞으로의 예측이 없습니다.';
@@ -667,10 +746,10 @@ function render() {
     `앞으로 ${rows.length}시간의 최대 예상 사용이 계약전력보다 ${number(Math.abs(margin))} kW ${margin<0?'높음':margin>0?'낮음':'차이 없음'}`;
   $('attentionTitle').textContent=rows.length?`앞으로 ${rows.length}시간`:'시뮬레이션 종료';
   $('attentionTime').textContent=focus?shortDate(focus.row.time):rows.length?'계약전력을 입력하세요.':'모든 사용량이 도착했습니다.';
-  $('attentionProbability').textContent=focus?'초과 가능성 '+probability(focus.row,threshold):'';
-  $('attentionCaption').textContent=focus?'선택기간 중 가장 높은 시간별 초과 가능성':'';
+  $('attentionProbability').textContent=focus?'초과 확률 '+probability(focus.row,threshold):'';
+  $('attentionCaption').textContent=focus?'선택기간 중 가장 높은 시간평균 전력의 계약전력 초과 확률':'';
   $('forecastPeriod').textContent=first?`${shortDate(first.time)}${rows.length>1?'–'+shortDate(rows.at(-1).time):''}${rows.length<Number($('horizon').value)?' · 종료까지 '+rows.length+'시간':''}`:'마지막 실제 사용까지 표시';
-  drawForecast(rows,focus,threshold);renderPlan(threshold);renderHistory();
+  drawForecast(rows,focus,threshold);renderPlan(threshold);renderContributions(rows);renderHistory();
   window.forecastSnapshot={index:frame.index,origin:frame.origin,started,playing,reviewing,loading,selectedRate,dailyIndex:dailyFrame?.index,maxObservationTime:last.time,predictionTimes:rows.map(r=>r.time)};
 }
 function schedule() {
@@ -772,6 +851,7 @@ $('entryForm').onsubmit=async event=>{
   }
 };
 $('pause').onclick=togglePlayback;$('contractPower').oninput=render;$('horizon').onchange=render;
+$('contributionTime').onchange=()=>{contributionStep=Number($('contributionTime').value);render();};
 $('reviewPlan').onclick=openReview;$('closeReview').onclick=closeReview;
 $('planTable').onclick=event=>{
   const button=event.target.closest('button[data-rate]');if(!button||!reviewing) return;
